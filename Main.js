@@ -399,7 +399,7 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
                             try {
                                 if (User == null) {
                                     User = sender;
-                                    let Data = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.operatorStats(me, "pc").url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+                                    let Data = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.operatorStats(me, "pc").url}`).header("Content-Type", "application/json").header("User-Agent", "R6Stats API Application").header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
                                     let JsonData = {};
                                     let Box = [];
                                     if (Data.error == "no_records_found") {
@@ -519,8 +519,8 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
                             try {
                                 if (User == null) { //중첩 명령어 금지
                                     User = sender; //닉네임을 인식하여 각각 다른사람이 이 명령어를 친다면 막음.
-                                    let Player = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.playerStats(me, "pc").url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
-                                    let Seasons = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.seasonalStats(me, "pc").url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+                                    let Player = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.playerStats(me, "pc").url}`).header("Content-Type", "application/json").header("User-Agent", "R6Stats API Application").header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+                                    let Seasons = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.seasonalStats(me, "pc").url}`).header("Content-Type", "application/json").header("User-Agent", "R6Stats API Application").header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
                                     if (Player.error || Seasons.error == "no_records_found") {
                                         User = sender;
                                         let stat = Jsoup.connect(`https://r6.tracker.network/profile/pc/${me}`).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
@@ -691,7 +691,7 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
                             try {
                                 if (User == null) {
                                     User = sender;
-                                    let Data = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.operatorStats(splitedMsg[1], "pc").url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+                                    let Data = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.operatorStats(splitedMsg[1], "pc").url}`).header("Content-Type", "application/json").header("User-Agent", "R6Stats API Application").header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
                                     let JsonData = {};
                                     let Box = [];
                                     if (Data.error == "no_records_found") {
@@ -808,8 +808,8 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
                             try {
                                 if (User == null) { //중첩 명령어 금지
                                     User = sender; //닉네임을 인식하여 각각 다른사람이 이 명령어를 친다면 막음.
-                                    let Player = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.playerStats(target, "pc").url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
-                                    let Seasons = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.seasonalStats(target, "pc").url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+                                    let Player = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.playerStats(target, "pc").url}`).header("Content-Type", "application/json").header("User-Agent", "R6Stats API Application").header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+                                    let Seasons = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.seasonalStats(target, "pc").url}`).header("Content-Type", "application/json").header("User-Agent", "R6Stats API Application").header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
                                     if (Player.error || Seasons.error == "no_records_found") {
                                         let stat = Jsoup.connect(`https://r6.tracker.network/profile/pc/${target}`).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
                                         let Player = JSON.parse(Jsoup.connect(`https://r6stats.com/api/stats/${stat}`).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body())
@@ -892,8 +892,8 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
 
 const Details = (username, platform) => {
     try {
-        let Player = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.playerStats(username, platform).url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
-        let Seasons = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.seasonalStats(username, platform).url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+        let Player = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.playerStats(username, platform).url}`).header("Content-Type", "application/json").header("User-Agent", "R6Stats API Application").header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+        let Seasons = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.seasonalStats(username, platform).url}`).header("Content-Type", "application/json").header("User-Agent", "R6Stats API Application").header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
         if (Player.error || Seasons.error == "no_records_found") {
             let stat = Jsoup.connect(`https://r6.tracker.network/profile/pc/${username}`).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
             let Player = JSON.parse(Jsoup.connect(`https://r6stats.com/api/stats/${stat}`).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body())
@@ -913,7 +913,7 @@ const OperRanking = (username, platform) => {
     try {
         let Box = [];
         let JsonData = {};
-        let Data = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.operatorStats(username, platform).url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+        let Data = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.operatorStats(username, platform).url}`).header("Content-Type", "application/json").header("User-Agent", "R6Stats API Application").header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
         if (Data.error == "no_records_found") {
             let stat = Jsoup.connect(`https://r6.tracker.network/profile/pc/${username}`).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
             let Data = JSON.parse(Jsoup.connect(`https://r6stats.com/api/stats/${stat}`).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body())
