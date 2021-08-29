@@ -1,4 +1,4 @@
-const R6StatsKey = String("R6StatsKey");
+const R6StatsKey = "Here R6 Stats Key";
 /*
 To obtain the code, contact the R6Stats Discord.
 https://discord.com/invite/pUdraS3
@@ -8,72 +8,72 @@ importClass(org.jsoup.Jsoup);
 const R6stats = require("player-stats.js");
 const allsee = "\u200b".repeat(500);
 const OperKoreaName = {
-  "SAS Recruit": "SAS 예비병력", 
-  "FBI Recruit": "FBI 예비병력", 
-  "GIGN Recruit": "GIGN 예비병력", 
-  "SPETZNAZ Recruit": "스페츠나츠 예비병력", 
-  "GSG-9 Recruit": "GSG-9 예비병력", 
-  "Sledge": "슬렛지", 
-  "Thatcher": "대처", 
-  "Smoke": "스모크", 
-  "Mute": "뮤트", 
-  "Ash": "애쉬", 
-  "Thermite": "써마이트", 
-  "Castle": "캐슬", 
-  "Pulse": "펄스", 
-  "Twitch": "트위치", 
-  "Montagne": "몽타뉴", 
-  "Doc": "닥", 
-  "Rook": "룩", 
-  "Glaz": "글라즈", 
-  "Fuze": "퓨즈", 
-  "Kapkan": "캅칸", 
-  "Tachanka": "타찬카", 
-  "Blitz": "블리츠", 
-  "IQ": "아이큐", 
-  "Jäger": "예거", 
-  "Bandit": "밴딧", 
-  "Buck": "벅", 
-  "Frost": "프로스트", 
-  "Blackbeard": "블랙비어드", 
-  "Valkyrie": "발키리", 
-  "Capitão": "카피탕", 
-  "Caveira": "카베이라", 
-  "Hibana": "히바나", 
-  "Echo": "에코", 
-  "Jackal": "자칼", 
-  "Mira": "미라", 
-  "Ying": "잉", 
-  "Lesion": "리전", 
-  "Zofia": "조피아", 
-  "Ela": "엘라", 
-  "Dokkaebi": "도깨비", 
-  "Vigil": "비질", 
-  "Finka": "핀카", 
-  "Lion": "라이언", 
-  "Maestro": "마에스트로", 
-  "Alibi": "알리바이", 
-  "Maverick": "매버릭", 
-  "Clash": "클래시", 
-  "Nomad": "노매드", 
-  "Kaid": "카이드", 
-  "Gridlock": "그리드락", 
-  "Mozzie": "모지", 
-  "Nøkk": "뇌크", 
-  "Warden": "워든", 
-  "Amaru": "아마루", 
-  "Goyo": "고요", 
-  "Wamai": "와마이", 
-  "Kali": "칼리", 
-  "Iana": "이아나", 
-  "Oryx": "오릭스", 
-  "Ace": "에이스", 
-  "Melusi": "멜루시", 
-  "Zero": "제로",
-  "Flores": "플로리스",
-  "Aruni": "아루니",
-  "Thunderbird": "썬더 버드"
-  };
+    "SAS Recruit": "SAS 예비병력",
+    "FBI Recruit": "FBI 예비병력",
+    "GIGN Recruit": "GIGN 예비병력",
+    "SPETZNAZ Recruit": "스페츠나츠 예비병력",
+    "GSG-9 Recruit": "GSG-9 예비병력",
+    "Sledge": "슬렛지",
+    "Thatcher": "대처",
+    "Smoke": "스모크",
+    "Mute": "뮤트",
+    "Ash": "애쉬",
+    "Thermite": "써마이트",
+    "Castle": "캐슬",
+    "Pulse": "펄스",
+    "Twitch": "트위치",
+    "Montagne": "몽타뉴",
+    "Doc": "닥",
+    "Rook": "룩",
+    "Glaz": "글라즈",
+    "Fuze": "퓨즈",
+    "Kapkan": "캅칸",
+    "Tachanka": "타찬카",
+    "Blitz": "블리츠",
+    "IQ": "아이큐",
+    "Jäger": "예거",
+    "Bandit": "밴딧",
+    "Buck": "벅",
+    "Frost": "프로스트",
+    "Blackbeard": "블랙비어드",
+    "Valkyrie": "발키리",
+    "Capitão": "카피탕",
+    "Caveira": "카베이라",
+    "Hibana": "히바나",
+    "Echo": "에코",
+    "Jackal": "자칼",
+    "Mira": "미라",
+    "Ying": "잉",
+    "Lesion": "리전",
+    "Zofia": "조피아",
+    "Ela": "엘라",
+    "Dokkaebi": "도깨비",
+    "Vigil": "비질",
+    "Finka": "핀카",
+    "Lion": "라이언",
+    "Maestro": "마에스트로",
+    "Alibi": "알리바이",
+    "Maverick": "매버릭",
+    "Clash": "클래시",
+    "Nomad": "노매드",
+    "Kaid": "카이드",
+    "Gridlock": "그리드락",
+    "Mozzie": "모지",
+    "Nøkk": "뇌크",
+    "Warden": "워든",
+    "Amaru": "아마루",
+    "Goyo": "고요",
+    "Wamai": "와마이",
+    "Kali": "칼리",
+    "Iana": "이아나",
+    "Oryx": "오릭스",
+    "Ace": "에이스",
+    "Melusi": "멜루시",
+    "Zero": "제로",
+    "Flores": "플로리스",
+    "Aruni": "아루니",
+    "Thunderbird": "썬더 버드"
+};
 const operimg = {
     "Mute": "https://cdn.r6stats.com/badges/mute_badge.png",
     "Smoke": "https://cdn.r6stats.com/badges/smoke_badge.png",
@@ -227,680 +227,663 @@ let CasualTie = {
     "PLATINUM I": "https://1.bp.blogspot.com/-YrDKPn6t_Wo/Xm3UYZsBteI/AAAAAAAAFxk/I3BdZa5fuRIG_4u0kg5nK4YV-KkvFVU1ACLcBGAsYHQ/s1600/hd-rank19.png",
     "DIAMOND": "https://1.bp.blogspot.com/-uBlYBPbiyCA/Xm3UY_DLCeI/AAAAAAAAFxs/cUEIesyO5Eccyeg1fVjma17FfbUPmLUIACLcBGAsYHQ/s1600/hd-rank20.png",
     "CHAMPIONS": "https://1.bp.blogspot.com/-BFJI_8pIaQ0/Xm3UZeqRDBI/AAAAAAAAFxw/QbXial45eQMf00UB0r_b480MmaOjbnOQQCLcBGAsYHQ/s1600/hd-rank21.png",
-    "V":5,
-    "IV":4,
+    "V": 5,
+    "IV": 4,
     "III": 3,
     "II": 2,
     "I": 1
 };
 let KoreaTie = {
-  "Not ranked yet.": "없음", 
-  "Unranked": "배치", 
-  "Copper V": "카퍼 5", 
-  "Copper IV": "카퍼 4", 
-  "Copper III": "카퍼 3", 
-  "Copper II": "카퍼 2", 
-  "Copper I": "카퍼 1", 
-  "Bronze V": "브론즈 5", 
-  "Bronze IV": "브론즈 4", 
-  "Bronze III": "브론즈 3", 
-  "Bronze II": "브론즈 2", 
-  "Bronze I": "브론즈 1", 
-  "Silver V": "실버 5", 
-  "Silver IV": "실버 4", 
-  "Silver III": "실버 3", 
-  "Silver II": "실버 2", 
-  "Silver I": "실버 1", 
-  "Gold III": "골드 3", 
-  "Gold II": "골드 2", 
-  "Gold I": "골드 1", 
-  "Platinum III": "플래티넘 3", 
-  "Platinum II": "플래티넘 2", 
-  "Platinum I": "플래티넘 1", 
-  "Diamond": "다이아몬드", 
-  "Champions": "챔피언"
-  };
-  let KoreaTie2 = {
-  "Not ranked yet.": "없음", 
-  "Unranked": "배치", 
-  "Copper 5": "카퍼 5", 
-  "Copper 4": "카퍼 4", 
-  "Copper 3": "카퍼 3", 
-  "Copper 2": "카퍼 2", 
-  "Copper 1": "카퍼 1", 
-  "Bronze 5": "브론즈 5", 
-  "Bronze 4": "브론즈 4", 
-  "Bronze 3": "브론즈 3", 
-  "Bronze 2": "브론즈 2", 
-  "Bronze 1": "브론즈 1", 
-  "Silver 5": "실버 5", 
-  "Silver 4": "실버 4", 
-  "Silver 3": "실버 3", 
-  "Silver 2": "실버 2", 
-  "Silver 1": "실버 1", 
-  "Gold 3": "골드 3", 
-  "Gold 2": "골드 2", 
-  "Gold 1": "골드 1", 
-  "Platinum 3": "플래티넘 3", 
-  "Platinum 2": "플래티넘 2", 
-  "Platinum 1": "플래티넘 1", 
-  "Diamond": "다이아몬드", 
-  "Champions": "챔피언"
-  };
-  let User = null;
+    "Not ranked yet.": "없음",
+    "Unranked": "배치",
+    "Copper V": "카퍼 5",
+    "Copper IV": "카퍼 4",
+    "Copper III": "카퍼 3",
+    "Copper II": "카퍼 2",
+    "Copper I": "카퍼 1",
+    "Bronze V": "브론즈 5",
+    "Bronze IV": "브론즈 4",
+    "Bronze III": "브론즈 3",
+    "Bronze II": "브론즈 2",
+    "Bronze I": "브론즈 1",
+    "Silver V": "실버 5",
+    "Silver IV": "실버 4",
+    "Silver III": "실버 3",
+    "Silver II": "실버 2",
+    "Silver I": "실버 1",
+    "Gold III": "골드 3",
+    "Gold II": "골드 2",
+    "Gold I": "골드 1",
+    "Platinum III": "플래티넘 3",
+    "Platinum II": "플래티넘 2",
+    "Platinum I": "플래티넘 1",
+    "Diamond": "다이아몬드",
+    "Champions": "챔피언"
+};
+let KoreaTie2 = {
+    "Not ranked yet.": "없음",
+    "Unranked": "배치",
+    "Copper 5": "카퍼 5",
+    "Copper 4": "카퍼 4",
+    "Copper 3": "카퍼 3",
+    "Copper 2": "카퍼 2",
+    "Copper 1": "카퍼 1",
+    "Bronze 5": "브론즈 5",
+    "Bronze 4": "브론즈 4",
+    "Bronze 3": "브론즈 3",
+    "Bronze 2": "브론즈 2",
+    "Bronze 1": "브론즈 1",
+    "Silver 5": "실버 5",
+    "Silver 4": "실버 4",
+    "Silver 3": "실버 3",
+    "Silver 2": "실버 2",
+    "Silver 1": "실버 1",
+    "Gold 3": "골드 3",
+    "Gold 2": "골드 2",
+    "Gold 1": "골드 1",
+    "Platinum 3": "플래티넘 3",
+    "Platinum 2": "플래티넘 2",
+    "Platinum 1": "플래티넘 1",
+    "Diamond": "다이아몬드",
+    "Champions": "챔피언"
+};
+let User = null;
+
 function response(room, msg, sender, isGroupChat, replier, imageDB, packageName) {
-    if (room =="" || room==""|| room=="" || room=="" || room == ""){   
-let target = "";
-    let splitedMsg = msg.split(" ");
-    if (splitedMsg[0] == "!전적") {
-        if (splitedMsg.length == 1)
-            target = sender
-            .replace(/[ㄱ-ㅎㅏ-ㅣ가-힣]/g, "")
-            .replace(/[\[\]<>()=₩÷×+♡☆&*^%~#@!',`|♤♧•○●□■◇$€£¥°※¤《》¡¿":;/]/g, "")
-            .replace(/(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\u0023-\u0039]\ufe0f?\u20e3|\u3299|\u3297|\u303d|\u3030|\u24c2|\ud83c[\udd70-\udd71]|\ud83c[\udd7e-\udd7f]|\ud83c\udd8e|\ud83c[\udd91-\udd9a]|\ud83c[\udde6-\uddff]|\ud83c[\ude01-\ude02]|\ud83c\ude1a|\ud83c\ude2f|\ud83c[\ude32-\ude3a]|\ud83c[\ude50-\ude51]|\u203c|\u2049|[\u25aa-\u25ab]|\u25b6|\u25c0|[\u25fb-\u25fe]|\u00a9|\u00ae|\u2122|\u2139|\ud83c\udc04|[\u2600-\u26FF]|\u2b05|\u2b06|\u2b07|\u2b1b|\u2b1c|\u2b50|\u2b55|\u231a|\u231b|\u2328|\u23cf|[\u23e9-\u23f3]|[\u23f8-\u23fa]|\ud83c\udccf|\u2934|\u2935|[\u2190-\u21ff])/g, "")
-            .replace(/ /g, "");
-        else
-            target = splitedMsg.slice(1).join(" ");
-      switch (splitedMsg[1]){
-        case String("나"):
-        target = sender
-            .replace(/[ㄱ-ㅎㅏ-ㅣ가-힣]/g, "")
-            .replace(/[\[\]<>()=₩÷×+♡☆&*^%~#@!',`|♤♧•○●□■◇$€£¥°※¤《》¡¿":;/]/g, "")
-            .replace(/(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\u0023-\u0039]\ufe0f?\u20e3|\u3299|\u3297|\u303d|\u3030|\u24c2|\ud83c[\udd70-\udd71]|\ud83c[\udd7e-\udd7f]|\ud83c\udd8e|\ud83c[\udd91-\udd9a]|\ud83c[\udde6-\uddff]|\ud83c[\ude01-\ude02]|\ud83c\ude1a|\ud83c\ude2f|\ud83c[\ude32-\ude3a]|\ud83c[\ude50-\ude51]|\u203c|\u2049|[\u25aa-\u25ab]|\u25b6|\u25c0|[\u25fb-\u25fe]|\u00a9|\u00ae|\u2122|\u2139|\ud83c\udc04|[\u2600-\u26FF]|\u2b05|\u2b06|\u2b07|\u2b1b|\u2b1c|\u2b50|\u2b55|\u231a|\u231b|\u2328|\u23cf|[\u23e9-\u23f3]|[\u23f8-\u23fa]|\ud83c\udccf|\u2934|\u2935|[\u2190-\u21ff])/g, "")
-            .replace(/ /g, "");
-        switch (splitedMsg[2]) {
-           case String("캐주얼"):
-           me = sender
-            .replace(/[ㄱ-ㅎㅏ-ㅣ가-힣]/g, "")
-            .replace(/[\[\]<>()=₩÷×+♡☆&*^%~#@!',`|♤♧•○●□■◇$€£¥°※¤《》¡¿":;/]/g, "")
-            .replace(/(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\u0023-\u0039]\ufe0f?\u20e3|\u3299|\u3297|\u303d|\u3030|\u24c2|\ud83c[\udd70-\udd71]|\ud83c[\udd7e-\udd7f]|\ud83c\udd8e|\ud83c[\udd91-\udd9a]|\ud83c[\udde6-\uddff]|\ud83c[\ude01-\ude02]|\ud83c\ude1a|\ud83c\ude2f|\ud83c[\ude32-\ude3a]|\ud83c[\ude50-\ude51]|\u203c|\u2049|[\u25aa-\u25ab]|\u25b6|\u25c0|[\u25fb-\u25fe]|\u00a9|\u00ae|\u2122|\u2139|\ud83c\udc04|[\u2600-\u26FF]|\u2b05|\u2b06|\u2b07|\u2b1b|\u2b1c|\u2b50|\u2b55|\u231a|\u231b|\u2328|\u23cf|[\u23e9-\u23f3]|[\u23f8-\u23fa]|\ud83c\udccf|\u2934|\u2935|[\u2190-\u21ff])/g, "")
-            .replace(/ /g, "");
-            replier.reply("⟨" + me + "⟩ 님 전적 검색중...");
-                try{
-                if (User == null) { //중첩 명령어 금지
-                    User = sender; //닉네임을 인식하여 각각 다른사람이 이 명령어를 친다면 막음.
-                    let Code = Jsoup.connect("https://r6.tracker.network/profile/pc/" + me).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
-                    let Player = JSON.parse(Jsoup.connect("https://r6stats.com/api/stats/" + Code).ignoreContentType(true).ignoreHttpErrors(true).get().text())
-                    let main = Jsoup.connect("https://r6.tracker.network/profile/pc/" + me + "/seasons").ignoreHttpErrors(true).get()
-                    let casual = main.select("div.r6-season").get(0)
-                    let fact = casual.select("div.r6-season__region").text()
-                    if(fact == "Ranked"){
-                      User = sender;
-                      let casual = main.select("div.r6-season").get(1)
-                      let casualTie = casual.select("div.trn-defstat__value").get(8).text();
-                      let casualTie2 = casual.select("div.trn-defstat__value").get(9).text();
-                      let casualkd = casual.select("div.trn-defstat__value").get(0).text();
-                      let casualwins = casual.select("div.trn-defstat__value").get(4).text()
-                      let casualaban = casual.select("div.trn-defstat__value").get(7).text()
-                      let casualskill = casual.select("div.r6-season__skill").text()
-                      Bridge.getScopeOf("Kakao").Kakao.send(String(room), {
-                        "link_ver": "4.0",
-                        "template_id": (45512),
-                        "template_args": {
-                            main_Title: Player["data"]["username"],
-                            image1: Player["data"]["avatar_url_146"],
-                            title1: "티어",
-                            explanation1: casualTie +" ("+casualTie2+")",
-                            image2: CasualTie[casualTie],
-                            title2: casualskill,
-                            explanation2: "",
-                            image3: "",
-                            title3: "킬뎃",
-                            explanation3: casualkd,
-                            image4: "",
-                            title4: "승률",
-                            explanation4: casualwins,
-                            image5: "",
-                            title5: "매치 포기",
-                            explanation5: casualaban,
-                            code: Player["data"]["uplay_id"]
-                        }
-                    }, "custom");
-                    User = null;
-                      } else { 
-                      let casual = main.select("div.r6-season").get(0)
-                      let casualTie = casual.select("div.trn-defstat__value").get(8).text();
-                      let casualTie2 = casual.select("div.trn-defstat__value").get(9).text();
-                      let casualkd = casual.select("div.trn-defstat__value").get(0).text();
-                      let casualwins = casual.select("div.trn-defstat__value").get(4).text()
-                      let casualaban = casual.select("div.trn-defstat__value").get(7).text()
-                      let casualskill = casual.select("div.r6-season__skill").text()
-                      Bridge.getScopeOf("Kakao").Kakao.send(String(room), {
-                        "link_ver": "4.0",
-                        "template_id": (45512),
-                        "template_args": {
-                            main_Title: Player["data"]["username"],
-                            image1: Player["data"]["avatar_url_146"],
-                            title1: "티어",
-                            explanation1: casualTie +" ("+casualTie2+")",
-                            image2: CasualTie[casualTie],
-                            title2: casualskill,
-                            explanation2: "",
-                            image3: "",
-                            title3: "킬뎃",
-                            explanation3: casualkd,
-                            image4: "",
-                            title4: "승률",
-                            explanation4: casualwins,
-                            image5: "",
-                            title5: "매치 포기",
-                            explanation5: casualaban,
-                            code: Player["data"]["uplay_id"]
-                        }
-                    }, "custom");
-                     User = null;
+    if (room == "● 레인보우식스 커뮤니티 since 2016" || room == "레인보우식스시즈PC" || room == "● 봇방" || room == "레식왕국 R6KD" || room == "레식레식" || room == "●" || room == "KOR | 레인보우식스시즈") {
+        let target = "";
+        let splitedMsg = msg.split(" ");
+        if (splitedMsg[0] == "!전적") {
+            if (splitedMsg.length == 1)
+                target = sender
+                .replace(/[^0-9a-z-_.]/gi, '');
+            else
+                target = splitedMsg.slice(1).join(" ");
+            switch (splitedMsg[1]) {
+                case String("나"):
+                    target = sender
+                        .replace(/[^0-9a-z-_.]/gi, '');
+                    switch (splitedMsg[2]) {
+                        case String("캐주얼"):
+                            me = sender
+                                .replace(/[^0-9a-z-_.]/gi, '');
+                            replier.reply(`⟨ ${me} ⟩ 님 전적 검색중...`);
+                            try {
+                                if (User == null) { //중첩 명령어 금지
+                                    User = sender; //닉네임을 인식하여 각각 다른사람이 이 명령어를 친다면 막음.
+                                    let Code = Jsoup.connect(`https://r6.tracker.network/profile/pc/${me}`).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
+                                    let Player = JSON.parse(Jsoup.connect(`https://r6stats.com/api/stats/${Code}`).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body())
+                                    let main = Jsoup.connect(`https://r6.tracker.network/profile/pc/${me}/seasons`).ignoreHttpErrors(!0).get()
+                                    let casual = main.select("div.r6-season").get(0)
+                                    let fact = casual.select("div.r6-season__region").text()
+                                    if (fact == "Ranked") {
+                                        User = sender;
+                                        let casual = main.select("div.r6-season").get(1)
+                                        let casualTie = casual.select("div.trn-defstat__value").get(8).text();
+                                        let casualTie2 = casual.select("div.trn-defstat__value").get(9).text();
+                                        let casualkd = casual.select("div.trn-defstat__value").get(0).text();
+                                        let casualwins = casual.select("div.trn-defstat__value").get(4).text()
+                                        let casualaban = casual.select("div.trn-defstat__value").get(7).text()
+                                        let casualskill = casual.select("div.r6-season__skill").text()
+                                        Bridge.getScopeOf("Kakao").Kakao.sendLink(String(room), {
+                                            "link_ver": "4.0",
+                                            "template_id": (45512),
+                                            "template_args": {
+                                                main_Title: Player["data"]["username"],
+                                                image1: Player["data"]["avatar_url_146"],
+                                                title1: "티어",
+                                                explanation1: casualTie + " (" + casualTie2 + ")",
+                                                image2: CasualTie[casualTie],
+                                                title2: casualskill,
+                                                explanation2: "",
+                                                image3: "",
+                                                title3: "킬뎃",
+                                                explanation3: casualkd,
+                                                image4: "",
+                                                title4: "승률",
+                                                explanation4: casualwins,
+                                                image5: "",
+                                                title5: "매치 포기",
+                                                explanation5: casualaban,
+                                                code: Player["data"]["uplay_id"]
+                                            }
+                                        }, "custom");
+                                        User = null;
+                                    } else {
+                                        let casual = main.select("div.r6-season").get(0)
+                                        let casualTie = casual.select("div.trn-defstat__value").get(8).text();
+                                        let casualTie2 = casual.select("div.trn-defstat__value").get(9).text();
+                                        let casualkd = casual.select("div.trn-defstat__value").get(0).text();
+                                        let casualwins = casual.select("div.trn-defstat__value").get(4).text()
+                                        let casualaban = casual.select("div.trn-defstat__value").get(7).text()
+                                        let casualskill = casual.select("div.r6-season__skill").text()
+                                        Bridge.getScopeOf("Kakao").Kakao.sendLink(String(room), {
+                                            "link_ver": "4.0",
+                                            "template_id": (45512),
+                                            "template_args": {
+                                                main_Title: Player["data"]["username"],
+                                                image1: Player["data"]["avatar_url_146"],
+                                                title1: "티어",
+                                                explanation1: casualTie + " (" + casualTie2 + ")",
+                                                image2: CasualTie[casualTie],
+                                                title2: casualskill,
+                                                explanation2: "",
+                                                image3: "",
+                                                title3: "킬뎃",
+                                                explanation3: casualkd,
+                                                image4: "",
+                                                title4: "승률",
+                                                explanation4: casualwins,
+                                                image5: "",
+                                                title5: "매치 포기",
+                                                explanation5: casualaban,
+                                                code: Player["data"]["uplay_id"]
+                                            }
+                                        }, "custom");
+                                        User = null;
+                                    }
+                                } else {
+                                    replier.reply(`${User}님이 쓰고 계십니다.\n차례를 지켜주세요.`); //같은 명령어를 다른사람들끼리 친다면 먼저 친사람에게 양보하라는뜻.
+                                }
+                            } catch (e) {
+                                if (e.message == "Cannot read property \"uplay_id\" from undefined") {
+                                    return replier.reply("Uplay ID를 가져오지 못했습니다.\n서버 통신이 늦거나 알수없는 오류입니다.");
+                                } else replier.reply(`검색 실패.${allsee}\n${e}`);
+                                User = null;
+                            }
+                            break;
+                        case "오퍼":
+                            me = sender
+                                .replace(/[^0-9a-z-_.]/gi, '');
+                            replier.reply(`⟨ ${me} ⟩ 님 전적 검색중...`);
+                            try {
+                                if (User == null) {
+                                    User = sender;
+                                    let Data = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.operatorStats(me, "pc").url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+                                    let JsonData = {};
+                                    let Box = [];
+                                    if (Data.error == "no_records_found") {
+                                        let stat = Jsoup.connect(`https://r6.tracker.network/profile/pc/${me}`).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
+                                        let R6stat = JSON.parse(Jsoup.connect(`https://r6stats.com/api/stats/${stat}`).ignoreContentType(!0).execute().body());
+                                        for (var i = 0; i < R6stat.data.operators.length; i++) {
+                                            JsonData[R6stat.data.operators[i].operator.name] = R6stat.data.operators[i].playtime;
+                                        }
+                                        for (let number in JsonData) {
+                                            Box.push([number, JsonData[number]]);
+                                        }
+                                        Box.sort(function(a, b) {
+                                            return b[1] - a[1];
+                                        });
+                                        Bridge.getScopeOf("Kakao").Kakao.sendLink(String(room), {
+                                            "link_ver": "4.0",
+                                            "template_id": (45515),
+                                            "template_args": {
+                                                main_Title: R6stat["data"]["username"],
+                                                image1: operimg[Box[0][0]],
+                                                title1: "",
+                                                explanation1: OperKoreaName[Box[0][0]] + "\n" + TimeConvert(Box[0][1]),
+                                                image2: operimg[Box[1][0]],
+                                                title2: "",
+                                                explanation2: OperKoreaName[Box[1][0]] + "\n" + TimeConvert(Box[1][1]),
+                                                image3: operimg[Box[2][0]],
+                                                title3: "",
+                                                explanation3: OperKoreaName[Box[2][0]] + "\n" + TimeConvert(Box[2][1]),
+                                                image4: operimg[Box[3][0]],
+                                                title4: "",
+                                                explanation4: OperKoreaName[Box[3][0]] + "\n" + TimeConvert(Box[3][1]),
+                                                image5: operimg[Box[4][0]],
+                                                title5: "",
+                                                explanation5: OperKoreaName[Box[4][0]] + "\n" + TimeConvert(Box[4][1]),
+                                                code: stat + "/operators"
+                                            }
+                                        }, "custom");
+                                        User = null;
+                                        Box = [];
+                                        JsonData = {};
+                                    } else {
+                                        for (var i = 0; i < Data.operators.length; i++) {
+                                            JsonData[Data.operators[i].name] = Data.operators[i].playtime;
+                                        }
+                                        for (let number in JsonData) {
+                                            Box.push([number, JsonData[number]]);
+                                        }
+                                        Box.sort(function(a, b) {
+                                            return b[1] - a[1];
+                                        });
+                                        Bridge.getScopeOf("Kakao").Kakao.sendLink(String(room), {
+                                            "link_ver": "4.0",
+                                            "template_id": (45515),
+                                            "template_args": {
+                                                main_Title: Data["username"],
+                                                image1: operimg[Box[0][0]],
+                                                title1: "",
+                                                explanation1: OperKoreaName[Box[0][0]] + "\n" + TimeConvert(Box[0][1]),
+                                                image2: operimg[Box[1][0]],
+                                                title2: "",
+                                                explanation2: OperKoreaName[Box[1][0]] + "\n" + TimeConvert(Box[1][1]),
+                                                image3: operimg[Box[2][0]],
+                                                title3: "",
+                                                explanation3: OperKoreaName[Box[2][0]] + "\n" + TimeConvert(Box[2][1]),
+                                                image4: operimg[Box[3][0]],
+                                                title4: "",
+                                                explanation4: OperKoreaName[Box[3][0]] + "\n" + TimeConvert(Box[3][1]),
+                                                image5: operimg[Box[4][0]],
+                                                title5: "",
+                                                explanation5: OperKoreaName[Box[4][0]] + "\n" + TimeConvert(Box[4][1]),
+                                                code: Data["uplay_id"] + "/operators"
+                                            }
+                                        }, "custom");
+                                        User = null;
+                                        Box = [];
+                                        JsonData = {};
+                                    }
+                                } else {
+                                    replier.reply(`${User} 님이 쓰고 계십니다.\n차례를 지켜주세요.`); //같은 명령어를 다른사람들끼리 친다면 먼저 친사람에게 양보하라는뜻.
+                                    Box = [];
+                                    JsonData = {};
+                                }
+                            } catch (e) {
+                                if (e.message == "Cannot read property \"uplay_id\" from undefined") {
+                                    return replier.reply("Uplay ID를 가져오지 못했습니다.\n서버 통신이 늦거나 알수없는 오류입니다.");
+                                } else replier.reply(`검색 실패.${allsee}\n${e}`);
+                                User = null;
+                                Box = [];
+                                JsonData = {};
+                            }
+                            Box = [];
+                            JsonData = {};
+                            break;
+                        case String("세부"):
+                            me = sender
+                                .replace(/[^0-9a-z-_.]/gi, '');
+                            replier.reply(`⟨ ${me} ⟩ 님 전적 검색중...`);
+                            try {
+                                if (User == null) { //중첩 명령어 금지
+                                    User = sender; //닉네임을 인식하여 각각 다른사람이 이 명령어를 친다면 막음.
+                                    replier.reply(Details(me, "pc"));
+                                    User = null; //중첩 명령어 종료
+                                } else {
+                                    replier.reply(`${User}님이 쓰고 계십니다.\n차례를 지켜주세요.`); //같은 명령어를 다른사람들끼리 친다면 먼저 친사람에게 양보하라는뜻.
+                                }
+                            } catch (e) {
+                                if (e.message == "Cannot read property \"uplay_id\" from undefined") {
+                                    return replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
+                                } else replier.reply(`검색 실패.${allsee}\n${e}`);
+                                User = null;
+                            }
+                            break;
+                        default:
+                            me = sender
+                                .replace(/[^0-9a-z-_.]/gi, '');
+                            replier.reply(`⟨ ${me} ⟩ 님 전적 검색중...`);
+                            try {
+                                if (User == null) { //중첩 명령어 금지
+                                    User = sender; //닉네임을 인식하여 각각 다른사람이 이 명령어를 친다면 막음.
+                                    let Player = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.playerStats(me, "pc").url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+                                    let Seasons = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.seasonalStats(me, "pc").url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+                                    if (Player.error || Seasons.error == "no_records_found") {
+                                        User = sender;
+                                        let stat = Jsoup.connect(`https://r6.tracker.network/profile/pc/${me}`).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
+                                        let Player = JSON.parse(Jsoup.connect(`https://r6stats.com/api/stats/${stat}`).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body())
+                                        let Seasons = JSON.parse(Jsoup.connect(`https://r6stats.com/api/stats/${Player["data"]["uplay_id"]}/seasonal`).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body())
+                                        let ranks = Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["regions"]["ncsa"][0]["rank"]
+                                        let max_ranks = Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["regions"]["ncsa"][0]["max_rank"]
+                                        Bridge.getScopeOf("Kakao").Kakao.sendLink(String(room), {
+                                            "link_ver": "4.0",
+                                            "template_id": (45512),
+                                            "template_args": {
+                                                main_image: "",
+                                                main_Title: Player["data"]["username"],
+                                                image1: Player["data"]["avatar_url_146"],
+                                                title1: "레벨",
+                                                explanation1: Player["data"]["progression"]["level"],
+                                                image2: RankTies2[Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["ranks"][ranks]["name"]],
+                                                title2: "티어",
+                                                explanation2: KoreaTie2[Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["ranks"][ranks]["name"]],
+                                                image3: "",
+                                                title3: "플레이",
+                                                explanation3: TimeConvert(Player["data"]["stats"][0]["general"]["playtime"]),
+                                                image4: "",
+                                                title4: "승률",
+                                                explanation4: getWinRate(Player["data"]["stats"][0]["general"]["wins"], Player["data"]["stats"][0]["general"]["losses"]).toFixed(2) + "%",
+                                                image5: "",
+                                                title5: "킬뎃",
+                                                explanation5: Player["data"]["stats"][0]["general"]["kd"].toFixed(2),
+                                                code: Player["data"]["uplay_id"]
+                                            }
+                                        }, "custom");
+                                        User = null; //중첩 명령어 종료
+                                    } else {
+                                        Bridge.getScopeOf("Kakao").Kakao.sendLink(String(room), {
+                                            "link_ver": "4.0",
+                                            "template_id": (45512),
+                                            "template_args": {
+                                                main_image: "",
+                                                main_Title: Player["username"],
+                                                image1: Player["avatar_url_146"],
+                                                title1: "레벨",
+                                                explanation1: Player["progression"]["level"],
+                                                image2: RankTies[Seasons["seasons"][Object.keys(Seasons["seasons"])[0]]["regions"]["ncsa"][0]["rank_text"]],
+                                                title2: "티어",
+                                                explanation2: KoreaTie[Seasons["seasons"][Object.keys(Seasons["seasons"])[0]]["regions"]["ncsa"][0]["rank_text"]],
+                                                image3: "",
+                                                title3: "플레이",
+                                                explanation3: TimeConvert(Player["stats"]["general"]["playtime"]),
+                                                image4: "",
+                                                title4: "승률",
+                                                explanation4: [getWinRate(Player["stats"]["general"]["wins"], Player["stats"]["general"]["losses"]).toFixed(2) + "%"],
+                                                image5: "",
+                                                title5: "킬뎃",
+                                                explanation5: Player["stats"]["general"]["kd"].toFixed(2),
+                                                code: Player["uplay_id"]
+                                            }
+                                        }, "custom");
+                                        User = null; //중첩 명령어 종료
+                                    }
+                                } else {
+                                    replier.reply(`${User}님이 쓰고 계십니다.\n차례를 지켜주세요.`); //같은 명령어를 다른사람들끼리 친다면 먼저 친사람에게 양보하라는뜻.
+                                }
+                            } catch (e) {
+                                if (e.message == "Cannot read property \"uplay_id\" from undefined") {
+                                    return replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
+                                } else replier.reply(`검색 실패.${allsee}\n${e}`);
+                                User = null;
+                            }
+                            break;
                     }
-            } else {
-                    replier.reply(User + "님이 쓰고 계십니다.\n차례를 지켜주세요."); //같은 명령어를 다른사람들끼리 친다면 먼저 친사람에게 양보하라는뜻.
-                }
-            } catch(e){
-                   if (e.message == "Cannot read property \"uplay_id\" from undefined") {
-                     return replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
-                    } else replier.reply("검색 실패."+allsee+"\n"+e);
-                User = null;
-            }
-                break;
-                case String("오퍼"):
-            me = sender
-            .replace(/[ㄱ-ㅎㅏ-ㅣ가-힣]/g, "")
-            .replace(/[\[\]<>()=₩÷×+♡☆&*^%~#@!',`|♤♧•○●□■◇$€£¥°※¤《》¡¿":;/]/g, "")
-            .replace(/(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\u0023-\u0039]\ufe0f?\u20e3|\u3299|\u3297|\u303d|\u3030|\u24c2|\ud83c[\udd70-\udd71]|\ud83c[\udd7e-\udd7f]|\ud83c\udd8e|\ud83c[\udd91-\udd9a]|\ud83c[\udde6-\uddff]|\ud83c[\ude01-\ude02]|\ud83c\ude1a|\ud83c\ude2f|\ud83c[\ude32-\ude3a]|\ud83c[\ude50-\ude51]|\u203c|\u2049|[\u25aa-\u25ab]|\u25b6|\u25c0|[\u25fb-\u25fe]|\u00a9|\u00ae|\u2122|\u2139|\ud83c\udc04|[\u2600-\u26FF]|\u2b05|\u2b06|\u2b07|\u2b1b|\u2b1c|\u2b50|\u2b55|\u231a|\u231b|\u2328|\u23cf|[\u23e9-\u23f3]|[\u23f8-\u23fa]|\ud83c\udccf|\u2934|\u2935|[\u2190-\u21ff])/g, "")
-            .replace(/ /g, "");
-                replier.reply("⟨" + me + "⟩ 님 전적 검색중...");
-                try{
-                if (User == null) {
-                    User = sender;
-                    let Data = JSON.parse(Jsoup.connect("https://api2.r6stats.com/public-api" + R6stats.operatorStats(me, "pc").url).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(true).ignoreHttpErrors(true).get().text());
-                    let JsonData = {};
-                    let Box = [];
-                    if (Data.error == "no_records_found") {
-                        let stat = Jsoup.connect("https://r6.tracker.network/profile/pc/" + me).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
-                        let R6stat = JSON.parse(Jsoup.connect("https://r6stats.com/api/stats/" + stat).ignoreContentType(true).get().text());
-                        for (var i = 0; i < R6stat.data.operators.length; i++) {
-                            JsonData[R6stat.data.operators[i].operator.name] = R6stat.data.operators[i].playtime;
-                        }
-                        for (let number in JsonData) {
-                            Box.push([number, JsonData[number]]);
-                        }
-                        Box.sort(function(a, b) {
-                            return b[1] - a[1];
-                        });
-                        Bridge.getScopeOf("Kakao").Kakao.send(String(room), {
-                            "link_ver": "4.0",
-                            "template_id": (45515),
-                            "template_args": {
-                                main_Title: R6stat["data"]["username"],
-                                image1: operimg[Box[0][0]],
-                                title1: "",
-                                explanation1: OperKoreaName[Box[0][0]] + "\n" + TimeConvert(Box[0][1]),
-                                image2: operimg[Box[1][0]],
-                                title2: "",
-                                explanation2: OperKoreaName[Box[1][0]] + "\n" + TimeConvert(Box[1][1]),
-                                image3: operimg[Box[2][0]],
-                                title3: "",
-                                explanation3: OperKoreaName[Box[2][0]] + "\n" + TimeConvert(Box[2][1]),
-                                image4: operimg[Box[3][0]],
-                                title4: "",
-                                explanation4: OperKoreaName[Box[3][0]] + "\n" + TimeConvert(Box[3][1]),
-                                image5: operimg[Box[4][0]],
-                                title5: "",
-                                explanation5: OperKoreaName[Box[4][0]] + "\n" + TimeConvert(Box[4][1]),
-                                code: stat + "/operators"
+                    break;
+                default:
+                    switch (splitedMsg[2]) {
+                        case String("캐주얼"):
+                            replier.reply(`⟨ ${splitedMsg[1]} ⟩ 님 전적 검색중...`);
+                            try {
+                                if (User == null) { //중첩 명령어 금지
+                                    User = sender; //닉네임을 인식하여 각각 다른사람이 이 명령어를 친다면 막음.
+                                    let Code = Jsoup.connect(`https://r6.tracker.network/profile/pc/${splitedMsg[1]}`).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
+                                    let Player = JSON.parse(Jsoup.connect(`https://r6stats.com/api/stats/${Code}`).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body())
+                                    if (Player.error == "no_records_found") {
+                                        replier.reply("레코드 오류!");
+                                    } else {
+                                        let main = Jsoup.connect(`https://r6.tracker.network/profile/pc/${splitedMsg[1]}/seasons`).get()
+                                        let casual = main.select("div.r6-season").get(0)
+                                        let fact = casual.select("div.r6-season__region").text()
+                                        if (fact == "Ranked") {
+                                            User = sender;
+                                            let casual = main.select("div.r6-season").get(1)
+                                            let casualTie = casual.select("div.trn-defstat__value").get(8).text();
+                                            let casualTie2 = casual.select("div.trn-defstat__value").get(9).text();
+                                            let casualkd = casual.select("div.trn-defstat__value").get(0).text();
+                                            let casualwins = casual.select("div.trn-defstat__value").get(4).text()
+                                            let casualaban = casual.select("div.trn-defstat__value").get(7).text()
+                                            let casualskill = casual.select("div.r6-season__skill").text()
+                                            Bridge.getScopeOf("Kakao").Kakao.sendLink(String(room), {
+                                                "link_ver": "4.0",
+                                                "template_id": (45512),
+                                                "template_args": {
+                                                    main_Title: Player["data"]["username"],
+                                                    image1: Player["data"]["avatar_url_146"],
+                                                    title1: "티어",
+                                                    explanation1: casualTie + " (" + casualTie2 + ")",
+                                                    image2: CasualTie[casualTie],
+                                                    title2: casualskill,
+                                                    explanation2: "",
+                                                    image3: "",
+                                                    title3: "킬뎃",
+                                                    explanation3: casualkd,
+                                                    image4: "",
+                                                    title4: "승률",
+                                                    explanation4: casualwins,
+                                                    image5: "",
+                                                    title5: "매치 포기",
+                                                    explanation5: casualaban,
+                                                    code: Player["data"]["uplay_id"]
+                                                }
+                                            }, "custom");
+                                            User = null;
+                                        } else {
+                                            let casual = main.select("div.r6-season").get(0)
+                                            let casualTie = casual.select("div.trn-defstat__value").get(8).text();
+                                            let casualTie2 = casual.select("div.trn-defstat__value").get(9).text();
+                                            let casualkd = casual.select("div.trn-defstat__value").get(0).text();
+                                            let casualwins = casual.select("div.trn-defstat__value").get(4).text()
+                                            let casualaban = casual.select("div.trn-defstat__value").get(7).text()
+                                            let casualskill = casual.select("div.r6-season__skill").text()
+                                            Bridge.getScopeOf("Kakao").Kakao.sendLink(String(room), {
+                                                "link_ver": "4.0",
+                                                "template_id": (45512),
+                                                "template_args": {
+                                                    main_Title: Player["data"]["username"],
+                                                    image1: Player["data"]["avatar_url_146"],
+                                                    title1: "티어",
+                                                    explanation1: casualTie + " (" + casualTie2 + ")",
+                                                    image2: CasualTie[casualTie],
+                                                    title2: casualskill,
+                                                    explanation2: "",
+                                                    image3: "",
+                                                    title3: "킬뎃",
+                                                    explanation3: casualkd,
+                                                    image4: "",
+                                                    title4: "승률",
+                                                    explanation4: casualwins,
+                                                    image5: "",
+                                                    title5: "매치 포기",
+                                                    explanation5: casualaban,
+                                                    code: Player["data"]["uplay_id"]
+                                                }
+                                            }, "custom");
+                                            User = null;
+                                        }
+                                        User = null;
+                                    }
+                                } else {
+                                    replier.reply(`${User}님이 쓰고 계십니다.\n차례를 지켜주세요.`); //같은 명령어를 다른사람들끼리 친다면 먼저 친사람에게 양보하라는뜻.
+                                }
+                                User = null;
+                            } catch (e) {
+                                if (e.message == "Cannot read property \"uplay_id\" from undefined") {
+                                    return replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
+                                } else replier.reply(`검색 실패.${allsee}\n${e}`);
+                                User = null;
                             }
-                        }, "custom");
-                        User = null;
-                        Box = [];
-                        JsonData = {};
-                    } else {
-                    for (var i = 0; i < Data.operators.length; i++) {
-                       JsonData[Data.operators[i].name] = Data.operators[i].playtime;
-                      }
-                      for (let number in JsonData) {
-                         Box.push([number, JsonData[number]]);
-                        }
-                         Box.sort(function(a, b) {
-                          return b[1] - a[1];
-                          });
-                    Bridge.getScopeOf("Kakao").Kakao.send(String(room), {
-                        "link_ver": "4.0",
-                        "template_id": (45515),
-                        "template_args": {
-                            main_Title: Data["username"],
-                            image1: operimg[Box[0][0]],
-                            title1: "",
-                            explanation1: OperKoreaName[Box[0][0]] + "\n" + TimeConvert(Box[0][1]),
-                            image2: operimg[Box[1][0]],
-                            title2: "",
-                            explanation2: OperKoreaName[Box[1][0]] + "\n" + TimeConvert(Box[1][1]),
-                            image3: operimg[Box[2][0]],
-                            title3: "",
-                            explanation3: OperKoreaName[Box[2][0]] + "\n" + TimeConvert(Box[2][1]),
-                            image4: operimg[Box[3][0]],
-                            title4: "",
-                            explanation4: OperKoreaName[Box[3][0]] + "\n" + TimeConvert(Box[3][1]),
-                            image5: operimg[Box[4][0]],
-                            title5: "",
-                            explanation5: OperKoreaName[Box[4][0]] + "\n" + TimeConvert(Box[4][1]),
-                            code: Data["uplay_id"] + "/operators"
-                        }
-                    }, "custom");
-                    User = null;
-                    Box = [];
-                    JsonData = {};
-                }
-             } else {
-                    replier.reply(User + "님이 쓰고 계십니다.\n차례를 지켜주세요."); //같은 명령어를 다른사람들끼리 친다면 먼저 친사람에게 양보하라는뜻.
-                    Box = [];
-                    JsonData = {};
-                }
-                } catch(e){
-                   if (e.message == "Cannot read property \"uplay_id\" from undefined") {
-                     return replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
-                } else replier.reply("검색 실패."+allsee+"\n"+e);
-                User = null;
-                Box = [];
-                JsonData = {};
-                }
-                Box = [];
-                JsonData = {};
-                break;
-            case String("세부"):
-            me = sender
-            .replace(/[ㄱ-ㅎㅏ-ㅣ가-힣]/g, "")
-            .replace(/[\[\]<>()=₩÷×+♡☆&*^%~#@!',`|♤♧•○●□■◇$€£¥°※¤《》¡¿":;/]/g, "")
-            .replace(/(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\u0023-\u0039]\ufe0f?\u20e3|\u3299|\u3297|\u303d|\u3030|\u24c2|\ud83c[\udd70-\udd71]|\ud83c[\udd7e-\udd7f]|\ud83c\udd8e|\ud83c[\udd91-\udd9a]|\ud83c[\udde6-\uddff]|\ud83c[\ude01-\ude02]|\ud83c\ude1a|\ud83c\ude2f|\ud83c[\ude32-\ude3a]|\ud83c[\ude50-\ude51]|\u203c|\u2049|[\u25aa-\u25ab]|\u25b6|\u25c0|[\u25fb-\u25fe]|\u00a9|\u00ae|\u2122|\u2139|\ud83c\udc04|[\u2600-\u26FF]|\u2b05|\u2b06|\u2b07|\u2b1b|\u2b1c|\u2b50|\u2b55|\u231a|\u231b|\u2328|\u23cf|[\u23e9-\u23f3]|[\u23f8-\u23fa]|\ud83c\udccf|\u2934|\u2935|[\u2190-\u21ff])/g, "")
-            .replace(/ /g, "");
-                replier.reply("⟨" + me + "⟩ 님 전적 검색중...");
-                try{
-                if (User == null) { //중첩 명령어 금지
-                    User = sender; //닉네임을 인식하여 각각 다른사람이 이 명령어를 친다면 막음.
-                    replier.reply(Details(me, "pc"));
-                    User = null; //중첩 명령어 종료
-                } else {
-                    replier.reply(User + "님이 쓰고 계십니다.\n차례를 지켜주세요."); //같은 명령어를 다른사람들끼리 친다면 먼저 친사람에게 양보하라는뜻.
-                }
-                } catch(e){
-                   if (e.message == "Cannot read property \"uplay_id\" from undefined") {
-                     return replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
-                } else replier.reply("검색 실패."+allsee+"\n"+e);
-                User = null;
-                }
-                break;
-            default:
-            me = sender
-            .replace(/[ㄱ-ㅎㅏ-ㅣ가-힣]/g, "")
-            .replace(/[\[\]<>()=₩÷×+♡☆&*^%~#@!',`|♤♧•○●□■◇$€£¥°※¤《》¡¿":;/]/g, "")
-            .replace(/(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\u0023-\u0039]\ufe0f?\u20e3|\u3299|\u3297|\u303d|\u3030|\u24c2|\ud83c[\udd70-\udd71]|\ud83c[\udd7e-\udd7f]|\ud83c\udd8e|\ud83c[\udd91-\udd9a]|\ud83c[\udde6-\uddff]|\ud83c[\ude01-\ude02]|\ud83c\ude1a|\ud83c\ude2f|\ud83c[\ude32-\ude3a]|\ud83c[\ude50-\ude51]|\u203c|\u2049|[\u25aa-\u25ab]|\u25b6|\u25c0|[\u25fb-\u25fe]|\u00a9|\u00ae|\u2122|\u2139|\ud83c\udc04|[\u2600-\u26FF]|\u2b05|\u2b06|\u2b07|\u2b1b|\u2b1c|\u2b50|\u2b55|\u231a|\u231b|\u2328|\u23cf|[\u23e9-\u23f3]|[\u23f8-\u23fa]|\ud83c\udccf|\u2934|\u2935|[\u2190-\u21ff])/g, "")
-            .replace(/ /g, "");
-                replier.reply("⟨" + me + "⟩ 님 전적 검색중...");
-                try{
-                if (User == null) { //중첩 명령어 금지
-                    User = sender; //닉네임을 인식하여 각각 다른사람이 이 명령어를 친다면 막음.
-                    let Player = JSON.parse(Jsoup.connect("https://api2.r6stats.com/public-api" + R6stats.playerStats(me, "pc").url).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(true).ignoreHttpErrors(true).get().text());
-                    let Seasons = JSON.parse(Jsoup.connect("https://api2.r6stats.com/public-api" + R6stats.seasonalStats(me, "pc").url).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(true).ignoreHttpErrors(true).get().text());
-                    if (Player.error || Seasons.error == "no_records_found") {
-                      User = sender;
-                        let stat = Jsoup.connect("https://r6.tracker.network/profile/pc/" + me).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
-                        let Player = JSON.parse(Jsoup.connect("https://r6stats.com/api/stats/" + stat).ignoreContentType(true).ignoreHttpErrors(true).get().text())
-                        let Seasons = JSON.parse(Jsoup.connect("https://r6stats.com/api/stats/" + Player["data"]["uplay_id"] + "/seasonal").ignoreContentType(true).ignoreHttpErrors(true).get().text())
-                        let ranks = Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["regions"]["ncsa"][0]["rank"]
-                        let max_ranks = Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["regions"]["ncsa"][0]["max_rank"]
-                        Bridge.getScopeOf("Kakao").Kakao.send(String(room), {
-                            "link_ver": "4.0",
-                            "template_id": (45512),
-                            "template_args": {
-                                main_image: "",
-                                main_Title: Player["data"]["username"],
-                                image1: Player["data"]["avatar_url_146"],
-                                title1: "레벨",
-                                explanation1: Player["data"]["progression"]["level"],
-                                image2: RankTies2[Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["ranks"][ranks]["name"]],
-                                title2: "티어",
-                                explanation2: KoreaTie2[Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["ranks"][ranks]["name"]],
-                                image3: "",
-                                title3: "플레이",
-                                explanation3: TimeConvert(Player["data"]["stats"][0]["general"]["playtime"]),
-                                image4: "",
-                                title4: "승률",
-                                explanation4: getWinRate(Player["data"]["stats"][0]["general"]["wins"], Player["data"]["stats"][0]["general"]["losses"]).toFixed(2) +"%",
-                                image5: "",
-                                title5: "킬뎃",
-                                explanation5: Player["data"]["stats"][0]["general"]["kd"].toFixed(2),
-                                code: Player["data"]["uplay_id"]
+                            break;
+                        case String("오퍼"):
+                            replier.reply(`⟨ ${splitedMsg[1]} ⟩ 님 전적 검색중...`);
+                            try {
+                                if (User == null) {
+                                    User = sender;
+                                    let Data = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.operatorStats(splitedMsg[1], "pc").url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+                                    let JsonData = {};
+                                    let Box = [];
+                                    if (Data.error == "no_records_found") {
+                                        let stat = Jsoup.connect(`https://r6.tracker.network/profile/pc/${splitedMsg[1]}`).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
+                                        let Data = JSON.parse(Jsoup.connect(`https://r6stats.com/api/stats/${stat}`).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body())
+                                        for (var i = 0; i < Data.data.operators.length; i++) {
+                                            JsonData[Data.data.operators[i].operator.name] = Data.data.operators[i].playtime;
+                                        }
+                                        for (let number in JsonData) {
+                                            Box.push([number, JsonData[number]]);
+                                        }
+                                        Box.sort(function(a, b) {
+                                            return b[1] - a[1];
+                                        });
+                                        Bridge.getScopeOf("Kakao").Kakao.sendLink(String(room), {
+                                            "link_ver": "4.0",
+                                            "template_id": (45515),
+                                            "template_args": {
+                                                main_Title: Data["data"]["username"],
+                                                image1: operimg[Box[0][0]],
+                                                title1: "",
+                                                explanation1: OperKoreaName[Box[0][0]] + "\n" + TimeConvert(Box[0][1]),
+                                                image2: operimg[Box[1][0]],
+                                                title2: "",
+                                                explanation2: OperKoreaName[Box[1][0]] + "\n" + TimeConvert(Box[1][1]),
+                                                image3: operimg[Box[2][0]],
+                                                title3: "",
+                                                explanation3: OperKoreaName[Box[2][0]] + "\n" + TimeConvert(Box[2][1]),
+                                                image4: operimg[Box[3][0]],
+                                                title4: "",
+                                                explanation4: OperKoreaName[Box[3][0]] + "\n" + TimeConvert(Box[3][1]),
+                                                image5: operimg[Box[4][0]],
+                                                title5: "",
+                                                explanation5: OperKoreaName[Box[4][0]] + "\n" + TimeConvert(Box[4][1]),
+                                                code: stat + "/operators"
+                                            }
+                                        }, "custom");
+                                        User = null;
+                                        Box = [];
+                                        JsonData = {};
+                                    } else {
+                                        for (var i = 0; i < Data.operators.length; i++) {
+                                            JsonData[Data.operators[i].name] = Data.operators[i].playtime;
+                                        }
+                                        for (let number in JsonData) {
+                                            Box.push([number, JsonData[number]]);
+                                        }
+                                        Box.sort(function(a, b) {
+                                            return b[1] - a[1];
+                                        });
+                                        Bridge.getScopeOf("Kakao").Kakao.sendLink(String(room), {
+                                            "link_ver": "4.0",
+                                            "template_id": (45515),
+                                            "template_args": {
+                                                main_Title: Data["username"],
+                                                image1: operimg[Box[0][0]],
+                                                title1: "",
+                                                explanation1: OperKoreaName[Box[0][0]] + "\n" + TimeConvert(Box[0][1]),
+                                                image2: operimg[Box[1][0]],
+                                                title2: "",
+                                                explanation2: OperKoreaName[Box[1][0]] + "\n" + TimeConvert(Box[1][1]),
+                                                image3: operimg[Box[2][0]],
+                                                title3: "",
+                                                explanation3: OperKoreaName[Box[2][0]] + "\n" + TimeConvert(Box[2][1]),
+                                                image4: operimg[Box[3][0]],
+                                                title4: "",
+                                                explanation4: OperKoreaName[Box[3][0]] + "\n" + TimeConvert(Box[3][1]),
+                                                image5: operimg[Box[4][0]],
+                                                title5: "",
+                                                explanation5: OperKoreaName[Box[4][0]] + "\n" + TimeConvert(Box[4][1]),
+                                                code: Data["uplay_id"] + "/operators"
+                                            }
+                                        }, "custom");
+                                        User = null;
+                                        Box = [];
+                                        JsonData = {};
+                                    }
+                                } else {
+                                    replier.reply(`${User}님이 쓰고 계십니다.\n차례를 지켜주세요.`); //같은 명령어를 다른사람들끼리 친다면 먼저 친사람에게 양보하라는뜻.
+                                    User = null;
+                                    Box = [];
+                                    JsonData = {};
+                                }
+                            } catch (error) {
+                                if (error.message == "Cannot read property \"uplay_id\" from undefined") {
+                                    return replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
+                                } else replier.reply(`검색 실패.${allsee}\n${error}`);
+                                User = null;
+                                Box = [];
+                                JsonData = {};
                             }
-                        }, "custom");
-                        User = null; //중첩 명령어 종료
-                    } else {
-                    Bridge.getScopeOf("Kakao").Kakao.send(String(room), {
-                        "link_ver": "4.0",
-                        "template_id": (45512),
-                        "template_args": {
-                            main_image: "",
-                            main_Title: Player["username"],
-                            image1: Player["avatar_url_146"],
-                            title1: "레벨",
-                            explanation1: Player["progression"]["level"],
-                            image2: RankTies[Seasons["seasons"][Object.keys(Seasons["seasons"])[0]]["regions"]["ncsa"][0]["rank_text"]],
-                            title2: "티어",
-                            explanation2: KoreaTie[Seasons["seasons"][Object.keys(Seasons["seasons"])[0]]["regions"]["ncsa"][0]["rank_text"]],
-                            image3: "",
-                            title3: "플레이",
-                            explanation3: TimeConvert(Player["stats"]["general"]["playtime"]),
-                            image4: "",
-                            title4: "승률",
-                            explanation4: [getWinRate(Player["stats"]["general"]["wins"], Player["stats"]["general"]["losses"]).toFixed(2) +"%"],
-                            image5: "",
-                            title5: "킬뎃",
-                            explanation5: Player["stats"]["general"]["kd"].toFixed(2),
-                            code: Player["uplay_id"]
-                        }
-                    }, "custom");
-                    User = null; //중첩 명령어 종료
-                }
-             } else {
-                    replier.reply(User + "님이 쓰고 계십니다.\n차례를 지켜주세요."); //같은 명령어를 다른사람들끼리 친다면 먼저 친사람에게 양보하라는뜻.
-                }
-                } catch(e){
-                   if (e.message == "Cannot read property \"uplay_id\" from undefined") {
-                     return replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
-                } else replier.reply("검색 실패."+allsee+"\n"+e);
-                User = null;
-                }
-                break;
-        }
-        break;
-        default:
-        switch (splitedMsg[2]) {
-            case String("캐주얼"):
-            replier.reply("⟨" + splitedMsg[1] + "⟩ 님 전적 검색중...");
-                try{
-                if (User == null) { //중첩 명령어 금지
-                    User = sender; //닉네임을 인식하여 각각 다른사람이 이 명령어를 친다면 막음.
-                    let Code = Jsoup.connect("https://r6.tracker.network/profile/pc/" + splitedMsg[1]).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
-                    let Player = JSON.parse(Jsoup.connect("https://r6stats.com/api/stats/" + Code).ignoreContentType(true).ignoreHttpErrors(true).get().text())
-                    if (Player.error == "no_records_found") {
-                        replier.reply("레코드 오류!");
-                    } else {
-                    let main = Jsoup.connect("https://r6.tracker.network/profile/pc/"+ splitedMsg[1] +"/seasons").timeout(5000).get()
-                    let casual = main.select("div.r6-season").get(0)
-                    let fact = casual.select("div.r6-season__region").text()
-                    if(fact == "Ranked"){
-                      User = sender;
-                      let casual = main.select("div.r6-season").get(1)
-                      let casualTie = casual.select("div.trn-defstat__value").get(8).text();
-                      let casualTie2 = casual.select("div.trn-defstat__value").get(9).text();
-                      let casualkd = casual.select("div.trn-defstat__value").get(0).text();
-                      let casualwins = casual.select("div.trn-defstat__value").get(4).text()
-                      let casualaban = casual.select("div.trn-defstat__value").get(7).text()
-                      let casualskill = casual.select("div.r6-season__skill").text()
-                      Bridge.getScopeOf("Kakao").Kakao.send(String(room), {
-                        "link_ver": "4.0",
-                        "template_id": (45512),
-                        "template_args": {
-                            main_Title: Player["data"]["username"],
-                            image1: Player["data"]["avatar_url_146"],
-                            title1: "티어",
-                            explanation1: casualTie +" ("+ casualTie2 +")",
-                            image2: CasualTie[casualTie],
-                            title2: casualskill,
-                            explanation2: "",
-                            image3: "",
-                            title3: "킬뎃",
-                            explanation3: casualkd,
-                            image4: "",
-                            title4: "승률",
-                            explanation4: casualwins,
-                            image5: "",
-                            title5: "매치 포기",
-                            explanation5: casualaban,
-                            code: Player["data"]["uplay_id"]
-                        }
-                    }, "custom");
-                    User = null;
-                      } else { 
-                      let casual = main.select("div.r6-season").get(0)
-                      let casualTie = casual.select("div.trn-defstat__value").get(8).text();
-                      let casualTie2 = casual.select("div.trn-defstat__value").get(9).text();
-                      let casualkd = casual.select("div.trn-defstat__value").get(0).text();
-                      let casualwins = casual.select("div.trn-defstat__value").get(4).text()
-                      let casualaban = casual.select("div.trn-defstat__value").get(7).text()
-                      let casualskill = casual.select("div.r6-season__skill").text()
-                      Bridge.getScopeOf("Kakao").Kakao.send(String(room), {
-                        "link_ver": "4.0",
-                        "template_id": (45512),
-                        "template_args": {
-                            main_Title: Player["data"]["username"],
-                            image1: Player["data"]["avatar_url_146"],
-                            title1: "티어",
-                            explanation1: casualTie+" ("+casualTie2+")",
-                            image2: CasualTie[casualTie],
-                            title2: casualskill,
-                            explanation2: "",
-                            image3: "",
-                            title3: "킬뎃",
-                            explanation3: casualkd,
-                            image4: "",
-                            title4: "승률",
-                            explanation4: casualwins,
-                            image5: "",
-                            title5: "매치 포기",
-                            explanation5: casualaban,
-                            code: Player["data"]["uplay_id"]
-                        }
-                    }, "custom");
-                    User = null;
+                            Box = [];
+                            JsonData = {};
+                            break;
+                        case String("세부"):
+                            replier.reply(`⟨ ${splitedMsg[1]} ⟩ 님 전적 검색중...`);
+                            try {
+                                if (User == null) { //중첩 명령어 금지
+                                    User = sender; //닉네임을 인식하여 각각 다른사람이 이 명령어를 친다면 막음.
+                                    replier.reply(Details(splitedMsg[1], "pc"));
+                                    User = null; //중첩 명령어 종료
+                                } else {
+                                    replier.reply(`${User}님이 쓰고 계십니다.\n차례를 지켜주세요.`); //같은 명령어를 다른사람들끼리 친다면 먼저 친사람에게 양보하라는뜻.
+                                }
+                            } catch (e) {
+                                if (e.message == "Cannot read property \"uplay_id\" from undefined") {
+                                    return replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
+                                } else replier.reply(`검색 실패.${allsee}\n${e}`);
+                                User = null;
+                            }
+                            break;
+                        default:
+                            replier.reply(`⟨ ${target} ⟩ 님 전적 검색중...`);
+                            try {
+                                if (User == null) { //중첩 명령어 금지
+                                    User = sender; //닉네임을 인식하여 각각 다른사람이 이 명령어를 친다면 막음.
+                                    let Player = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.playerStats(target, "pc").url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+                                    let Seasons = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.seasonalStats(target, "pc").url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+                                    if (Player.error || Seasons.error == "no_records_found") {
+                                        let stat = Jsoup.connect(`https://r6.tracker.network/profile/pc/${target}`).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
+                                        let Player = JSON.parse(Jsoup.connect(`https://r6stats.com/api/stats/${stat}`).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body())
+                                        let Seasons = JSON.parse(Jsoup.connect(`https://r6stats.com/api/stats/${Player["data"]["uplay_id"]}/seasonal`).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body())
+                                        let ranks = Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["regions"]["ncsa"][0]["rank"]
+                                        let max_ranks = Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["regions"]["ncsa"][0]["max_rank"]
+                                        Bridge.getScopeOf("Kakao").Kakao.sendLink(String(room), {
+                                            "link_ver": "4.0",
+                                            "template_id": (45512),
+                                            "template_args": {
+                                                main_image: "",
+                                                main_Title: Player["data"]["username"],
+                                                image1: Player["data"]["avatar_url_146"],
+                                                title1: "레벨",
+                                                explanation1: Player["data"]["progression"]["level"],
+                                                image2: RankTies2[Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["ranks"][ranks]["name"]],
+                                                title2: "티어",
+                                                explanation2: KoreaTie2[Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["ranks"][ranks]["name"]],
+                                                image3: "",
+                                                title3: "플레이",
+                                                explanation3: TimeConvert(Player["data"]["stats"][0]["general"]["playtime"]),
+                                                image4: "",
+                                                title4: "승률",
+                                                explanation4: getWinRate(Player["data"]["stats"][0]["general"]["wins"], Player["data"]["stats"][0]["general"]["losses"]).toFixed(2) + "%",
+                                                image5: "",
+                                                title5: "킬뎃",
+                                                explanation5: Player["data"]["stats"][0]["general"]["kd"].toFixed(2),
+                                                code: Player["data"]["uplay_id"]
+                                            }
+                                        }, "custom");
+                                        User = null; //중첩 명령어 종료
+                                    } else {
+                                        Bridge.getScopeOf("Kakao").Kakao.sendLink(String(room), {
+                                            "link_ver": "4.0",
+                                            "template_id": (45512),
+                                            "template_args": {
+                                                main_image: "",
+                                                main_Title: Player["username"],
+                                                image1: Player["avatar_url_146"],
+                                                title1: "레벨",
+                                                explanation1: Player["progression"]["level"],
+                                                image2: RankTies[Seasons["seasons"][Object.keys(Seasons["seasons"])[0]]["regions"]["ncsa"][0]["rank_text"]],
+                                                title2: "티어",
+                                                explanation2: KoreaTie[Seasons["seasons"][Object.keys(Seasons["seasons"])[0]]["regions"]["ncsa"][0]["rank_text"]],
+                                                image3: "",
+                                                title3: "플레이",
+                                                explanation3: TimeConvert(Player["stats"]["general"]["playtime"]),
+                                                image4: "",
+                                                title4: "승률",
+                                                explanation4: getWinRate(Player["stats"]["general"]["wins"], Player["stats"]["general"]["losses"]).toFixed(2) + "%",
+                                                image5: "",
+                                                title5: "킬뎃",
+                                                explanation5: Player["stats"]["general"]["kd"].toFixed(2),
+                                                code: Player["uplay_id"]
+                                            }
+                                        }, "custom");
+                                        User = null; //중첩 명령어 종료
+                                    }
+                                } else {
+                                    replier.reply(`${User}님이 쓰고 계십니다.\n차례를 지켜주세요.`); //같은 명령어를 다른사람들끼리 친다면 먼저 친사람에게 양보하라는뜻.
+                                }
+                            } catch (e) {
+                                if (e.message == "Cannot read property \"uplay_id\" from undefined") {
+                                    replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
+                                    User = null;
+                                } else replier.reply(`검색 실패.${allsee}\n${e}`);
+                                User = null;
+                            }
+                            break;
                     }
                     User = null;
-                }
-            } else {
-                    replier.reply(User + "님이 쓰고 계십니다.\n차례를 지켜주세요."); //같은 명령어를 다른사람들끼리 친다면 먼저 친사람에게 양보하라는뜻.
-                }
-                User = null;
-                } catch(e){
-                   if (e.message == "Cannot read property \"uplay_id\" from undefined") {
-                     return replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
-                } else replier.reply("검색 실패."+allsee+"\n"+e);
-                User = null;
-                }
-                break;
-            case String("오퍼"):
-                replier.reply("⟨" + splitedMsg[1] + "⟩ 님 전적 검색중...");
-                try {
-                if (User == null) {
-                    User = sender;
-                    let Data = JSON.parse(Jsoup.connect("https://api2.r6stats.com/public-api" + R6stats.operatorStats(splitedMsg[1], "pc").url).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(true).ignoreHttpErrors(true).get().text());
-                    let JsonData = {};
-                    let Box = [];
-                    if (Data.error == "no_records_found") {
-                        let stat = Jsoup.connect("https://r6.tracker.network/profile/pc/" + splitedMsg[1]).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
-                        let Data = JSON.parse(Jsoup.connect("https://r6stats.com/api/stats/" + stat).ignoreContentType(true).ignoreHttpErrors(true).get().text())                
-                        for (var i = 0; i < Data.data.operators.length; i++) {
-                            JsonData[Data.data.operators[i].operator.name] = Data.data.operators[i].playtime;
-                        }
-                        for (let number in JsonData) {
-                            Box.push([number, JsonData[number]]);
-                        }
-                        Box.sort(function(a, b) {
-                            return b[1] - a[1];
-                        });
-                        Bridge.getScopeOf("Kakao").Kakao.send(String(room), {
-                            "link_ver": "4.0",
-                            "template_id": (45515),
-                            "template_args": {
-                                main_Title: Data["data"]["username"],
-                                image1: operimg[Box[0][0]],
-                                title1: "",
-                                explanation1: OperKoreaName[Box[0][0]] + "\n" + TimeConvert(Box[0][1]),
-                                image2: operimg[Box[1][0]],
-                                title2: "",
-                                explanation2: OperKoreaName[Box[1][0]] + "\n" + TimeConvert(Box[1][1]),
-                                image3: operimg[Box[2][0]],
-                                title3: "",
-                                explanation3: OperKoreaName[Box[2][0]] + "\n" + TimeConvert(Box[2][1]),
-                                image4: operimg[Box[3][0]],
-                                title4: "",
-                                explanation4: OperKoreaName[Box[3][0]] + "\n" + TimeConvert(Box[3][1]),
-                                image5: operimg[Box[4][0]],
-                                title5: "",
-                                explanation5: OperKoreaName[Box[4][0]] + "\n" + TimeConvert(Box[4][1]),
-                                code: stat + "/operators"
-                            }
-                        }, "custom");
-                        User = null;
-                        Box = [];
-                        JsonData = {};
-                    } else {
-                    for (var i = 0; i < Data.operators.length; i++) {
-                      JsonData[Data.operators[i].name] = Data.operators[i].playtime;
-                      }
-                      for (let number in JsonData) {
-                        Box.push([number, JsonData[number]]);
-                        }
-                        Box.sort(function(a, b) {
-                          return b[1] - a[1];
-                          });
-                    Bridge.getScopeOf("Kakao").Kakao.send(String(room), {
-                        "link_ver": "4.0",
-                        "template_id": (45515),
-                        "template_args": {
-                            main_Title: Data["username"],
-                            image1: operimg[Box[0][0]],
-                            title1: "",
-                            explanation1: OperKoreaName[Box[0][0]] + "\n" + TimeConvert(Box[0][1]),
-                            image2: operimg[Box[1][0]],
-                            title2: "",
-                            explanation2: OperKoreaName[Box[1][0]] + "\n" + TimeConvert(Box[1][1]),
-                            image3: operimg[Box[2][0]],
-                            title3: "",
-                            explanation3: OperKoreaName[Box[2][0]] + "\n" + TimeConvert(Box[2][1]),
-                            image4: operimg[Box[3][0]],
-                            title4: "",
-                            explanation4: OperKoreaName[Box[3][0]] + "\n" + TimeConvert(Box[3][1]),
-                            image5: operimg[Box[4][0]],
-                            title5: "",
-                            explanation5: OperKoreaName[Box[4][0]] + "\n" + TimeConvert(Box[4][1]),
-                            code: Data["uplay_id"] + "/operators"
-                        }
-                    }, "custom");
-                    User = null;
-                    Box = [];
-                    JsonData = {};
-                }
-             } else {
-                    replier.reply(User + "님이 쓰고 계십니다.\n차례를 지켜주세요."); //같은 명령어를 다른사람들끼리 친다면 먼저 친사람에게 양보하라는뜻.
-                    User = null;
-                    Box = [];
-                    JsonData = {};
-                }
-                } catch(error){
-                   if (error.message == "Cannot read property \"uplay_id\" from undefined") {
-                     return replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
-                } else replier.reply("검색 실패." + allsee + "\n" + error);
-                User = null;
-                Box = [];
-                JsonData = {};
-                }
-                Box = [];
-                JsonData = {};
-                break;
-            case String("세부"):
-                replier.reply("⟨" + splitedMsg[1] + "⟩ 님 전적 검색중...");
-                try{
-                if (User == null) { //중첩 명령어 금지
-                    User = sender; //닉네임을 인식하여 각각 다른사람이 이 명령어를 친다면 막음.
-                    replier.reply(Details(splitedMsg[1],"pc"));
-                    User = null; //중첩 명령어 종료
-                } else {
-                    replier.reply(User + "님이 쓰고 계십니다.\n차례를 지켜주세요."); //같은 명령어를 다른사람들끼리 친다면 먼저 친사람에게 양보하라는뜻.
-                }
-                } catch(e){
-                   if (e.message == "Cannot read property \"uplay_id\" from undefined") {
-                     return replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
-                } else replier.reply("검색 실패."+allsee+"\n"+e);
-                User = null;
-                }
-                break;
-            default:
-                replier.reply("⟨" + target + "⟩ 님 전적 검색중...");
-                try{
-                if (User == null) { //중첩 명령어 금지
-                    User = sender; //닉네임을 인식하여 각각 다른사람이 이 명령어를 친다면 막음.
-                    let Player = JSON.parse(Jsoup.connect("https://api2.r6stats.com/public-api" + R6stats.playerStats(target, "pc").url).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(true).ignoreHttpErrors(true).get().text());
-                    let Seasons = JSON.parse(Jsoup.connect("https://api2.r6stats.com/public-api" + R6stats.seasonalStats(target, "pc").url).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(true).ignoreHttpErrors(true).get().text());
-                    if (Player.error || Seasons.error == "no_records_found") {
-                        let stat = Jsoup.connect("https://r6.tracker.network/profile/pc/" + target).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
-                        let Player = JSON.parse(Jsoup.connect("https://r6stats.com/api/stats/" + stat).ignoreContentType(true).ignoreHttpErrors(true).get().text())
-                        let Seasons = JSON.parse(Jsoup.connect("https://r6stats.com/api/stats/" + Player["data"]["uplay_id"] + "/seasonal").ignoreContentType(true).ignoreHttpErrors(true).get().text())
-                        let ranks = Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["regions"]["ncsa"][0]["rank"]
-                        let max_ranks = Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["regions"]["ncsa"][0]["max_rank"]
-                        Bridge.getScopeOf("Kakao").Kakao.send(String(room), {
-                            "link_ver": "4.0",
-                            "template_id": (45512),
-                            "template_args": {
-                                main_image: "",
-                                main_Title: Player["data"]["username"],
-                                image1: Player["data"]["avatar_url_146"],
-                                title1: "레벨",
-                                explanation1: Player["data"]["progression"]["level"],
-                                image2: RankTies2[Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["ranks"][ranks]["name"]],
-                                title2: "티어",
-                                explanation2: KoreaTie2[Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["ranks"][ranks]["name"]],
-                                image3: "",
-                                title3: "플레이",
-                                explanation3: TimeConvert(Player["data"]["stats"][0]["general"]["playtime"]),
-                                image4: "",
-                                title4: "승률",
-                                explanation4: getWinRate(Player["data"]["stats"][0]["general"]["wins"], Player["data"]["stats"][0]["general"]["losses"]).toFixed(2) +"%",
-                                image5: "",
-                                title5: "킬뎃",
-                                explanation5: Player["data"]["stats"][0]["general"]["kd"].toFixed(2),
-                                code: Player["data"]["uplay_id"]
-                            }
-                        }, "custom");
-                        User = null; //중첩 명령어 종료
-                    } else {
-                    Bridge.getScopeOf("Kakao").Kakao.send(String(room), {
-                        "link_ver": "4.0",
-                        "template_id": (45512),
-                        "template_args": {
-                            main_image: "",
-                            main_Title: Player["username"],
-                            image1: Player["avatar_url_146"],
-                            title1: "레벨",
-                            explanation1: Player["progression"]["level"],
-                            image2: RankTies[Seasons["seasons"][Object.keys(Seasons["seasons"])[0]]["regions"]["ncsa"][0]["rank_text"]],
-                            title2: "티어",
-                            explanation2: KoreaTie[Seasons["seasons"][Object.keys(Seasons["seasons"])[0]]["regions"]["ncsa"][0]["rank_text"]],
-                            image3: "",
-                            title3: "플레이",
-                            explanation3: TimeConvert(Player["stats"]["general"]["playtime"]),
-                            image4: "",
-                            title4: "승률",
-                            explanation4: getWinRate(Player["stats"]["general"]["wins"], Player["stats"]["general"]["losses"]).toFixed(2) +"%",
-                            image5: "",
-                            title5: "킬뎃",
-                            explanation5: Player["stats"]["general"]["kd"].toFixed(2),
-                            code: Player["uplay_id"]
-                        }
-                    }, "custom");
-                    User = null; //중첩 명령어 종료
-                }
-             } else {
-                    replier.reply(User + "님이 쓰고 계십니다.\n차례를 지켜주세요."); //같은 명령어를 다른사람들끼리 친다면 먼저 친사람에게 양보하라는뜻.
-                }
-                } catch(e){
-                   if (e.message == "Cannot read property \"uplay_id\" from undefined") {
-                     replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
-                     User = null;
-                } else replier.reply("검색 실패."+allsee+"\n"+e);
-                User = null;
-                }
-                break;
-                }
-           User = null;
             }
-        Box = [];
-        JsonData = {};
+            Box = [];
+            JsonData = {};
         }
         Box = [];
         JsonData = {};
@@ -909,60 +892,59 @@ let target = "";
 
 const Details = (username, platform) => {
     try {
-    let Player = JSON.parse(Jsoup.connect("https://api2.r6stats.com/public-api" + R6stats.playerStats(username, platform).url).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(true).ignoreHttpErrors(true).get().text());
-    let Seasons = JSON.parse(Jsoup.connect("https://api2.r6stats.com/public-api" + R6stats.seasonalStats(username, platform).url).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(true).ignoreHttpErrors(true).get().text());
-    if(Player.error || Seasons.error == "no_records_found"){
-      let stat = Jsoup.connect("https://r6.tracker.network/profile/pc/" + username).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
-      let Player = JSON.parse(Jsoup.connect("https://r6stats.com/api/stats/" + stat).ignoreContentType(true).ignoreHttpErrors(true).get().text())
-      let Seasons = JSON.parse(Jsoup.connect("https://r6stats.com/api/stats/" + stat + "/seasonal").ignoreContentType(true).ignoreHttpErrors(true).get().text())
-      let ranks = Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["regions"]["ncsa"][0]["rank"]
-      let max_ranks = Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["regions"]["ncsa"][0]["max_rank"]
-      return "⬪ 닉네임 : " + Player["data"]["username"] + "\n━ ❛ 간략 ❜ ━━━━━━━━\n• 레벨 : " + Player["data"]["progression"]["level"] + "\n• 현재 티어 : " + KoreaTie2[Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["ranks"][ranks]["name"]] + "\n➥ 최고 티어 : " + KoreaTie2[Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["ranks"][max_ranks]["name"]] + "\n• 오퍼 순위\n" + OperRanking(username, platform) + "\n• 사살률 : " + Player["data"]["stats"][0]["general"]["kd"].toFixed(2) + "\n• 승률 : " + [getWinRate(Player["data"]["stats"][0]["general"]["wins"], Player["data"]["stats"][0]["general"]["losses"]).toFixed(2) +"%"]+"\n[ 전체 내용 보려면 클릭 ]" + allsee +"\n━ ❛ 총합 ❜ ━━━━━━━━\n• 사살 : " + Player["data"]["stats"][0]["general"]["kills"] + "\n• 죽음 : " + Player["data"]["stats"][0]["general"]["deaths"] +"\n• 헤드샷 : " + Player["data"]["stats"][0]["general"]["headshots"] + "\n• 근접 킬 : " + Player["data"]["stats"][0]["general"]["melee_kills"] +"\n• 관통 킬 : " + Player["data"]["stats"][0]["general"]["penetration_kills"] + "\n• 사살률 : " + Player["data"]["stats"][0]["general"]["kd"].toFixed(2) + "\n• 승리 : " + Player["data"]["stats"][0]["general"]["wins"] + "\n• 패배 : " + Player["data"]["stats"][0]["general"]["losses"] + "\n• 승률 : " + [getWinRate(Player["data"]["stats"][0]["general"]["wins"], Player["data"]["stats"][0]["general"]["losses"]).toFixed(2) +"%"] + "\n• 레펠 브리칭 : " + Player["data"]["stats"][0]["general"]["rappel_breaches"] + "\n• 레인포스 강화 : " + Player["data"]["stats"][0]["general"]["reinforcements_deployed"] + "\n• 부활 : " + Player["data"]["stats"][0]["general"]["revives"] + "\n• 자살 : " + Player["data"]["stats"][0]["general"]["suicides"] +"\n━ ❛ 캐주얼 ❜ ━━━━━━━\n• 사살 : " + Player["data"]["stats"][0]["queue"]["casual"]["kills"] + "\n• 죽음 : " + Player["data"]["stats"][0]["queue"]["casual"]["deaths"] + "\n• 사살률 : " + Player["data"]["stats"][0]["queue"]["casual"]["kd"].toFixed(2) + "\n• 승리 : " + Player["data"]["stats"][0]["queue"]["casual"]["wins"] + "\n• 패배 : " + Player["data"]["stats"][0]["queue"]["casual"]["losses"] + "\n• 승률 : " + [getWinRate(Player["data"]["stats"][0]["queue"]["casual"]["wins"], Player["data"]["stats"][0]["queue"]["casual"]["losses"]).toFixed(2) +"%"] + "\n• 플레이 타임 : " + TimeConvert(Player["data"]["stats"][0]["queue"]["casual"]["playtime"]) + "\n━ ❛ 랭크 ❜ ━━━━━━━━\n• 사살 : " + Player["data"]["stats"][0]["queue"]["ranked"]["kills"] + "\n• 죽음 : " + Player["data"]["stats"][0]["queue"]["ranked"]["deaths"] + "\n• 사살률 : " + Player["data"]["stats"][0]["queue"]["ranked"]["kd"].toFixed(2) + "\n• 승리 : " + Player["data"]["stats"][0]["queue"]["ranked"]["wins"] + "\n• 패배 : " + Player["data"]["stats"][0]["queue"]["ranked"]["losses"] + "\n• 승률 : " + [getWinRate(Player["data"]["stats"][0]["queue"]["ranked"]["wins"], Player["data"]["stats"][0]["queue"]["ranked"]["losses"]).toFixed(2) +"%"] + "\n• 플레이 타임 : " + TimeConvert(Player["data"]["stats"][0]["queue"]["ranked"]["playtime"]) + "\n• 고유 번호 : " + stat;
-    } else {
-    return "⬪ 닉네임 : " + Player["username"] + "\n━ ❛ 간략 ❜ ━━━━━━━━\n• 레벨 : " + Player["progression"]["level"] + "\n• 현재 티어 : " + KoreaTie[Seasons["seasons"][Object.keys(Seasons["seasons"])[0]]["regions"]["ncsa"][0]["rank_text"]] + "\n➥ 최고 티어 : " + KoreaTie[Seasons["seasons"][Object.keys(Seasons["seasons"])[0]]["regions"]["ncsa"][0]["max_rank_text"]] + "\n• 오퍼 순위\n" + OperRanking(username, platform) + "\n• 사살률 : " + Player["stats"]["general"]["kd"].toFixed(2) + "\n• 승률 : " + [getWinRate(Player["stats"]["general"]["wins"], Player["stats"]["general"]["losses"]).toFixed(2) +"%"]+"\n[ 전체 내용 보려면 클릭 ]" + allsee +"\n━ ❛ 총합 ❜ ━━━━━━━━\n• 사살 : " + Player["stats"]["general"]["kills"] + "\n• 죽음 : " + Player["stats"]["general"]["deaths"] +"\n• 헤드샷 : " + Player["stats"]["general"]["headshots"] + "\n• 근접 킬 : " + Player["stats"]["general"]["melee_kills"] +"\n• 관통 킬 : " + Player["stats"]["general"]["penetration_kills"] + "\n• 사살률 : " + Player["stats"]["general"]["kd"].toFixed(2) + "\n• 승리 : " + Player["stats"]["general"]["wins"] + "\n• 패배 : " + Player["stats"]["general"]["losses"] + "\n• 승률 : " + [getWinRate(Player["stats"]["general"]["wins"], Player["stats"]["general"]["losses"]).toFixed(2) +"%"] + "\n• 레펠 브리칭 : " + Player["stats"]["general"]["rappel_breaches"] + "\n• 레인포스 강화 : " + Player["stats"]["general"]["reinforcements_deployed"] + "\n• 부활 : " + Player["stats"]["general"]["revives"] + "\n• 자살 : " + Player["stats"]["general"]["suicides"] +"\n━ ❛ 캐주얼 ❜ ━━━━━━━\n• 사살 : " + Player["stats"]["queue"]["casual"]["kills"] + "\n• 죽음 : " + Player["stats"]["queue"]["casual"]["deaths"] + "\n• 사살률 : " + Player["stats"]["queue"]["casual"]["kd"].toFixed(2) + "\n• 승리 : " + Player["stats"]["queue"]["casual"]["wins"] + "\n• 패배 : " + Player["stats"]["queue"]["casual"]["losses"] + "\n• 승률 : " + [getWinRate(Player["stats"]["queue"]["casual"]["wins"], Player["stats"]["queue"]["casual"]["losses"]).toFixed(2) +"%"] + "\n• 플레이 타임 : " + TimeConvert(Player["stats"]["queue"]["casual"]["playtime"]) + "\n━ ❛ 랭크 ❜ ━━━━━━━━\n• 사살 : " + Player["stats"]["queue"]["ranked"]["kills"] + "\n• 죽음 : " + Player["stats"]["queue"]["ranked"]["deaths"] + "\n• 사살률 : " + Player["stats"]["queue"]["ranked"]["kd"].toFixed(2) + "\n• 승리 : " + Player["stats"]["queue"]["ranked"]["wins"] + "\n• 패배 : " + Player["stats"]["queue"]["ranked"]["losses"] + "\n• 승률 : " + [getWinRate(Player["stats"]["queue"]["ranked"]["wins"], Player["stats"]["queue"]["ranked"]["losses"]).toFixed(2) +"%"] + "\n• 플레이 타임 : " + TimeConvert(Player["stats"]["queue"]["ranked"]["playtime"]) + "\n• 고유 번호 : " + Player["uplay_id"];
+        let Player = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.playerStats(username, platform).url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+        let Seasons = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.seasonalStats(username, platform).url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+        if (Player.error || Seasons.error == "no_records_found") {
+            let stat = Jsoup.connect(`https://r6.tracker.network/profile/pc/${username}`).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
+            let Player = JSON.parse(Jsoup.connect(`https://r6stats.com/api/stats/${stat}`).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body())
+            let Seasons = JSON.parse(Jsoup.connect(`https://r6stats.com/api/stats/${stat}/seasonal`).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body())
+            let ranks = Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["regions"]["ncsa"][0]["rank"]
+            let max_ranks = Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["regions"]["ncsa"][0]["max_rank"]
+            return `⬪ 닉네임 : ${Player["data"]["username"]}\n━ ❛ 간략 ❜ ━━━━━━━━\n• 레벨 : ${Player["data"]["progression"]["level"]}\n• 현재 티어 : ${KoreaTie2[Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["ranks"][ranks]["name"]]}\n➥ 최고 티어 : ${KoreaTie2[Seasons["data"]["seasons"][Object.keys(Seasons["data"]["seasons"])[0]]["ranks"][max_ranks]["name"]]}\n• 오퍼 순위\n${OperRanking(username, platform)}\n• 사살률 : ${Player["data"]["stats"][0]["general"]["kd"].toFixed(2)}\n• 승률 : ${[getWinRate(Player["data"]["stats"][0]["general"]["wins"], Player["data"]["stats"][0]["general"]["losses"]).toFixed(2) +"%"]}\n[ 전체 내용 보려면 클릭 ]${allsee}\n━ ❛ 총합 ❜ ━━━━━━━━\n• 사살 : ${Player["data"]["stats"][0]["general"]["kills"]}\n• 죽음 : ${Player["data"]["stats"][0]["general"]["deaths"]}\n• 헤드샷 : ${Player["data"]["stats"][0]["general"]["headshots"]}\n• 근접 킬 : ${Player["data"]["stats"][0]["general"]["melee_kills"]}\n• 관통 킬 : ${Player["data"]["stats"][0]["general"]["penetration_kills"]}\n• 사살률 : ${Player["data"]["stats"][0]["general"]["kd"].toFixed(2)}\n• 승리 : ${Player["data"]["stats"][0]["general"]["wins"]}\n• 패배 : ${Player["data"]["stats"][0]["general"]["losses"]}\n• 승률 : ${[getWinRate(Player["data"]["stats"][0]["general"]["wins"], Player["data"]["stats"][0]["general"]["losses"]).toFixed(2) +"%"]}\n• 레펠 브리칭 : ${Player["data"]["stats"][0]["general"]["rappel_breaches"]}\n• 레인포스 강화 : ${Player["data"]["stats"][0]["general"]["reinforcements_deployed"]}\n• 부활 : ${Player["data"]["stats"][0]["general"]["revives"]}\n• 자살 : ${Player["data"]["stats"][0]["general"]["suicides"]}\n━ ❛ 캐주얼 ❜ ━━━━━━━\n• 사살 : ${Player["data"]["stats"][0]["queue"]["casual"]["kills"]}\n• 죽음 : ${Player["data"]["stats"][0]["queue"]["casual"]["deaths"]}\n• 사살률 : ${Player["data"]["stats"][0]["queue"]["casual"]["kd"].toFixed(2)}\n• 승리 : ${Player["data"]["stats"][0]["queue"]["casual"]["wins"]}\n• 패배 : ${Player["data"]["stats"][0]["queue"]["casual"]["losses"]}\n• 승률 : ${[getWinRate(Player["data"]["stats"][0]["queue"]["casual"]["wins"], Player["data"]["stats"][0]["queue"]["casual"]["losses"]).toFixed(2) +"%"]}\n• 플레이 타임 : ${TimeConvert(Player["data"]["stats"][0]["queue"]["casual"]["playtime"])}\n━ ❛ 랭크 ❜ ━━━━━━━━\n• 사살 : ${Player["data"]["stats"][0]["queue"]["ranked"]["kills"]}\n• 죽음 : ${Player["data"]["stats"][0]["queue"]["ranked"]["deaths"]}\n• 사살률 : ${Player["data"]["stats"][0]["queue"]["ranked"]["kd"].toFixed(2)}\n• 승리 : ${Player["data"]["stats"][0]["queue"]["ranked"]["wins"]}\n• 패배 : ${Player["data"]["stats"][0]["queue"]["ranked"]["losses"]}\n• 승률 : ${[getWinRate(Player["data"]["stats"][0]["queue"]["ranked"]["wins"], Player["data"]["stats"][0]["queue"]["ranked"]["losses"]).toFixed(2) +"%"]}\n• 플레이 타임 : ${TimeConvert(Player["data"]["stats"][0]["queue"]["ranked"]["playtime"])}\n• 고유 번호 : ${stat}`;
+        } else {
+            return `⬪ 닉네임 : ${Player["username"]}\n━ ❛ 간략 ❜ ━━━━━━━━\n• 레벨 : ${Player["progression"]["level"]}\n• 현재 티어 : ${KoreaTie[Seasons["seasons"][Object.keys(Seasons["seasons"])[0]]["regions"]["ncsa"][0]["rank_text"]]}\n➥ 최고 티어 : ${KoreaTie[Seasons["seasons"][Object.keys(Seasons["seasons"])[0]]["regions"]["ncsa"][0]["max_rank_text"]]}\n• 오퍼 순위\n${OperRanking(username, platform)}\n• 사살률 : ${Player["stats"]["general"]["kd"].toFixed(2)}\n• 승률 : ${[getWinRate(Player["stats"]["general"]["wins"], Player["stats"]["general"]["losses"]).toFixed(2) +"%"]}\n[ 전체 내용 보려면 클릭 ]${allsee}\n━ ❛ 총합 ❜ ━━━━━━━━\n• 사살 : ${Player["stats"]["general"]["kills"]}\n• 죽음 : ${Player["stats"]["general"]["deaths"]}\n• 헤드샷 : ${Player["stats"]["general"]["headshots"]}\n• 근접 킬 : ${Player["stats"]["general"]["melee_kills"]}\n• 관통 킬 : ${Player["stats"]["general"]["penetration_kills"]}\n• 사살률 : ${Player["stats"]["general"]["kd"].toFixed(2)}\n• 승리 : ${Player["stats"]["general"]["wins"]}\n• 패배 : ${Player["stats"]["general"]["losses"]}\n• 승률 : ${[getWinRate(Player["stats"]["general"]["wins"], Player["stats"]["general"]["losses"]).toFixed(2) +"%"]}\n• 레펠 브리칭 : ${Player["stats"]["general"]["rappel_breaches"]}\n• 레인포스 강화 : " ${Player["stats"]["general"]["reinforcements_deployed"]}\n• 부활 : ${Player["stats"]["general"]["revives"]}\n• 자살 : ${Player["stats"]["general"]["suicides"]}\n━ ❛ 캐주얼 ❜ ━━━━━━━\n• 사살 : ${Player["stats"]["queue"]["casual"]["kills"]}\n• 죽음 : ${Player["stats"]["queue"]["casual"]["deaths"]}\n• 사살률 : ${Player["stats"]["queue"]["casual"]["kd"].toFixed(2)}\n• 승리 : ${Player["stats"]["queue"]["casual"]["wins"]}\n• 패배 : ${Player["stats"]["queue"]["casual"]["losses"]}\n• 승률 : ${[getWinRate(Player["stats"]["queue"]["casual"]["wins"], Player["stats"]["queue"]["casual"]["losses"]).toFixed(2) +"%"]}\n• 플레이 타임 : ${TimeConvert(Player["stats"]["queue"]["casual"]["playtime"])}\n━ ❛ 랭크 ❜ ━━━━━━━━\n• 사살 : ${Player["stats"]["queue"]["ranked"]["kills"]}\n• 죽음 : ${Player["stats"]["queue"]["ranked"]["deaths"]}\n• 사살률 : ${Player["stats"]["queue"]["ranked"]["kd"].toFixed(2)}\n• 승리 : ${Player["stats"]["queue"]["ranked"]["wins"]}\n• 패배 : ${Player["stats"]["queue"]["ranked"]["losses"]}\n• 승률 : ${[getWinRate(Player["stats"]["queue"]["ranked"]["wins"], Player["stats"]["queue"]["ranked"]["losses"]).toFixed(2) +"%"]}\n• 플레이 타임 : ${TimeConvert(Player["stats"]["queue"]["ranked"]["playtime"])}\n• 고유 번호 : ${Player["uplay_id"]}`;
+        }
+    } catch (error) {
+        return `검색 실패.\n아이디가 다르거나 없습니다.\n${error}`;
     }
-    } catch(error) {
-      return `검색 실패.\n아이디가 다르거나 없습니다.\n` + error;
-    }
-  };
-  
-
+};
 
 const OperRanking = (username, platform) => {
-  try{
-    let Box = [];
-    let JsonData = {};
-    let Data = JSON.parse(Jsoup.connect("https://api2.r6stats.com/public-api" + R6stats.operatorStats(username, platform).url).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(true).ignoreHttpErrors(true).get().text());
-    if(Data.error == "no_records_found"){
-        let stat = Jsoup.connect("https://r6.tracker.network/profile/pc/" + username).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
-        let Data = JSON.parse(Jsoup.connect("https://r6stats.com/api/stats/" + stat).ignoreContentType(true).ignoreHttpErrors(true).get().text())
-        for (var i = 0; i < Data.data.operators.length; i++) {
-            JsonData[Data.data.operators[i].operator.name] = Data.data.operators[i].playtime;
-          }
-          for (let number in JsonData) {
-            Box.push([number, JsonData[number]]);
-          }
-          Box.sort(function(a, b) {
-          return b[1] - a[1];
-        });
-          return ["➊ " + OperKoreaName[Box[0][0]] + " (" + TimeConvert(Box[0][1]) + ")" + "\n➋ " + OperKoreaName[Box[1][0]] + " (" + TimeConvert(Box[1][1]) + ")" + "\n➌ " + OperKoreaName[Box[2][0]] + " (" + TimeConvert(Box[2][1]) + ")", Box = []].join(""); Box = [];      
-    }else{
-for (var i = 0; i < Data.operators.length; i++) {
-    JsonData[Data.operators[i].name] = Data.operators[i].playtime;
-  }
-  for (let number in JsonData) {
-    Box.push([number, JsonData[number]]);
-  }
-  Box.sort(function(a, b) {
-  return b[1] - a[1];
-});
-  return ["➊ " + OperKoreaName[Box[0][0]] + " (" + TimeConvert(Box[0][1]) + ")" + "\n➋ " + OperKoreaName[Box[1][0]] + " (" + TimeConvert(Box[1][1]) + ")" + "\n➌ " + OperKoreaName[Box[2][0]] + " (" + TimeConvert(Box[2][1]) + ")", Box = []].join(""); Box = [];
-}
-} catch(error){
-  return "값을 가져올수 없음.";
-}
+    try {
+        let Box = [];
+        let JsonData = {};
+        let Data = JSON.parse(Jsoup.connect(`https://api2.r6stats.com/public-api${R6stats.operatorStats(username, platform).url}`).header("Authorization", "Bearer " + R6StatsKey).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body());
+        if (Data.error == "no_records_found") {
+            let stat = Jsoup.connect(`https://r6.tracker.network/profile/pc/${username}`).get().toString().split("<meta property=\"og:image\" content=\"https://ubisoft-avatars.akamaized.net/")[1].split("/default_256_256.png\">")[0];
+            let Data = JSON.parse(Jsoup.connect(`https://r6stats.com/api/stats/${stat}`).ignoreContentType(!0).ignoreHttpErrors(!0).execute().body())
+            for (var i = 0; i < Data.data.operators.length; i++) {
+                JsonData[Data.data.operators[i].operator.name] = Data.data.operators[i].playtime;
+            }
+            for (let number in JsonData) {
+                Box.push([number, JsonData[number]]);
+            }
+            Box.sort(function(a, b) {
+                return b[1] - a[1];
+            });
+            return [`➊ ${OperKoreaName[Box[0][0]]} ( ${TimeConvert(Box[0][1])} )\n➋ ${OperKoreaName[Box[1][0]]} ( ${TimeConvert(Box[1][1])} )\n➌ ${OperKoreaName[Box[2][0]]} ( ${TimeConvert(Box[2][1])} )`, Box = []].join(``);
+            Box = [];
+        } else {
+            for (var i = 0; i < Data.operators.length; i++) {
+                JsonData[Data.operators[i].name] = Data.operators[i].playtime;
+            }
+            for (let number in JsonData) {
+                Box.push([number, JsonData[number]]);
+            }
+            Box.sort(function(a, b) {
+                return b[1] - a[1];
+            });
+            return [`➊ ${OperKoreaName[Box[0][0]]}( ${TimeConvert(Box[0][1])} )\n➋ ${OperKoreaName[Box[1][0]]} ( ${TimeConvert(Box[1][1])} )\n➌ ${OperKoreaName[Box[2][0]]} ( ${TimeConvert(Box[2][1])} )`, Box = []].join(``);
+            Box = [];
+        }
+    } catch (error) {
+        return "값을 가져올수 없음.";
+    }
 };
-  
 
 const getWinRate = (t, e) => {
     return 0 != t ? t / (t + e) * 100 : 0;
