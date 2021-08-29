@@ -137,9 +137,9 @@ const operimg = {
     "Ace": "https://cdn.r6stats.com/badges/ace_badge.png",
     "Melusi": "https://cdn.r6stats.com/badges/melusi_badge.png",
     "Zero": "https://cdn.r6stats.com/badges/zero_badge.png",
-    "Flores": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/75vqJXXKCM2EDO0iiNqRDe/fa018cd2e2900ce2fee7ab49ff3eb09b/r6s-operators-badge-flores.png",
-    "Aruni": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5rOLCYQOh5HH0Nv6NHe38H/9b0328e497113d55ecb88cc2b090cbcd/r6s-operators-badge-aruni.png",
-    "Thunderbird": "https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/YQfDJ42B2IKcKnb0lRaXq/0cedb53c439b0fe448be95713a836b29/r6s-operators-badge-thunderbird.png"
+    "Flores": "https://cdn.r6stats.com/badges/flores_badge.png",
+    "Aruni": "https://cdn.r6stats.com/badges/aruni_badge.png",
+    "Thunderbird": "https://cdn.r6stats.com/badges/thunderbird_badge.png"
 };
 let RankTies = {
     "Not ranked yet.": "https://1.bp.blogspot.com/-mJplONtR7kE/Xm3UVIOKdKI/AAAAAAAAFw4/5OP_xi9nXTw5N3vZcCiPNV0wZCTRZmSwQCLcBGAsYHQ/s1600/hd-rank0.png",
