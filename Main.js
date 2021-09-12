@@ -1,4 +1,4 @@
-const R6StatsKey = "Here R6 Stats Key";
+const R6StatsKey = "R6 Stats Key";
 /*
 To obtain the code, contact the R6Stats Discord.
 https://discord.com/invite/pUdraS3
@@ -72,7 +72,7 @@ const OperKoreaName = {
     "Zero": "제로",
     "Flores": "플로리스",
     "Aruni": "아루니",
-    "Thunderbird": "썬더 버드"
+    "Thunderbird": "썬더버드"
 };
 const operimg = {
     "Mute": "https://cdn.r6stats.com/badges/mute_badge.png",
@@ -507,7 +507,7 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
                                 }
                             } catch (e) {
                                 if (e.message == "Cannot read property \"uplay_id\" from undefined") {
-                                    return replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
+                                    return replier.reply("Uplay ID를 가져오지 못했습니다.\n서버 통신이 늦거나 알수없는 오류입니다.");
                                 } else replier.reply(`검색 실패.${allsee}\n${e}`);
                                 User = null;
                             }
@@ -585,7 +585,7 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
                                 }
                             } catch (e) {
                                 if (e.message == "Cannot read property \"uplay_id\" from undefined") {
-                                    return replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
+                                    return replier.reply("Uplay ID를 가져오지 못했습니다.\n서버 통신이 늦거나 알수없는 오류입니다.");
                                 } else replier.reply(`검색 실패.${allsee}\n${e}`);
                                 User = null;
                             }
@@ -681,7 +681,7 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
                                 User = null;
                             } catch (e) {
                                 if (e.message == "Cannot read property \"uplay_id\" from undefined") {
-                                    return replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
+                                    return replier.reply("Uplay ID를 가져오지 못했습니다.\n서버 통신이 늦거나 알수없는 오류입니다.");
                                 } else replier.reply(`검색 실패.${allsee}\n${e}`);
                                 User = null;
                             }
@@ -777,7 +777,7 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
                                 }
                             } catch (error) {
                                 if (error.message == "Cannot read property \"uplay_id\" from undefined") {
-                                    return replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
+                                    return replier.reply("Uplay ID를 가져오지 못했습니다.\n서버 통신이 늦거나 알수없는 오류입니다.");
                                 } else replier.reply(`검색 실패.${allsee}\n${error}`);
                                 User = null;
                                 Box = [];
@@ -798,7 +798,7 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
                                 }
                             } catch (e) {
                                 if (e.message == "Cannot read property \"uplay_id\" from undefined") {
-                                    return replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
+                                    return replier.reply("Uplay ID를 가져오지 못했습니다.\n서버 통신이 늦거나 알수없는 오류입니다.");
                                 } else replier.reply(`검색 실패.${allsee}\n${e}`);
                                 User = null;
                             }
@@ -873,7 +873,7 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
                                 }
                             } catch (e) {
                                 if (e.message == "Cannot read property \"uplay_id\" from undefined") {
-                                    replier.reply("Uplay 고유 아이디 가 존재하지 않습니다.\n닉네임을 잘못 치셨거나, 해당 닉네임의 데이터가 없습니다.");
+                                    replier.reply("Uplay ID를 가져오지 못했습니다.\n서버 통신이 늦거나 알수없는 오류입니다.");
                                     User = null;
                                 } else replier.reply(`검색 실패.${allsee}\n${e}`);
                                 User = null;
