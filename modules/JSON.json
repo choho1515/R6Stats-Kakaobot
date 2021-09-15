@@ -63,7 +63,8 @@ const OperKoreaName = {
     "Zero": "제로",
     "Flores": "플로리스",
     "Aruni": "아루니",
-    "Thunderbird": "썬더 버드"
+    "Thunderbird": "썬더 버드",
+    "Osa": "오사"
 };
 const operimg = {
     "Mute": "https://cdn.r6stats.com/badges/mute_badge.png",
@@ -130,7 +131,8 @@ const operimg = {
     "Zero": "https://cdn.r6stats.com/badges/zero_badge.png",
     "Flores": "https://cdn.r6stats.com/badges/flores_badge.png",
     "Aruni": "https://cdn.r6stats.com/badges/aruni_badge.png",
-    "Thunderbird": "https://cdn.r6stats.com/badges/thunderbird_badge.png"
+    "Thunderbird": "https://cdn.r6stats.com/badges/thunderbird_badge.png",
+    "Osa": "https://cdn.r6stats.com/badges/osa_badge.png"
 };
 let RankTies = {
     "Not ranked yet.": "https://1.bp.blogspot.com/-mJplONtR7kE/Xm3UVIOKdKI/AAAAAAAAFw4/5OP_xi9nXTw5N3vZcCiPNV0wZCTRZmSwQCLcBGAsYHQ/s1600/hd-rank0.png",
