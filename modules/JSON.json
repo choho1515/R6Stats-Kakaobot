@@ -222,7 +222,7 @@ let CasualTie = {
     "PLATINUM III": "https://raw.githubusercontent.com/choho1515/R6Stats-Kakaobot/main/img/Platinum3.png",
     "PLATINUM II": "https://raw.githubusercontent.com/choho1515/R6Stats-Kakaobot/main/img/Platinum2.png",
     "PLATINUM I": "https://raw.githubusercontent.com/choho1515/R6Stats-Kakaobot/main/img/Platinum1.png",
-    "DIAMOND III": "https://raw.githubusercontent.com/choho1515/R6Stats-Kakaobot/main/img/Diamond3.png"
+    "DIAMOND III": "https://raw.githubusercontent.com/choho1515/R6Stats-Kakaobot/main/img/Diamond3.png",
     "DIAMOND II": "https://raw.githubusercontent.com/choho1515/R6Stats-Kakaobot/main/img/Diamond2.png",
     "DIAMOND I": "https://raw.githubusercontent.com/choho1515/R6Stats-Kakaobot/main/img/Diamond1.png",
     "CHAMPIONS": "https://raw.githubusercontent.com/choho1515/R6Stats-Kakaobot/main/img/Champions.png",
